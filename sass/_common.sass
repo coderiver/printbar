@@ -46,10 +46,227 @@
 // 	+png(blabla)
 // p
 // 	+jpg(bla)
-body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
-	line-height: 1.4
 
+=rr
+	font-family: 'Roboto', sans-serif
+
+$white: #fff
+$grey: #313131
+$light-grey: #303030
+$light-grey2: #dfdfdf
+$red: #ee254a
+$black: #2b2b2b
+
+body
+	color: $black
+	font-size: 13px 
+	line-height: 1.4
+	font-weight: 400
+	+rr
 
 // common blocks      
+
+//out
+.out
+	min-height: 100%
+	height: auto !important
+	height: 100%
+	margin: 0 auto -155px
+
+//container
+.container
+	margin: 0 auto
+	min-width: 1000px
+	max-width: 1200px
+	&.container_rel
+		height: 0
+		position: relative
+	
+//header
+.header
+	color: $white
+	font-weight: 300
+	overflow: hidden
+	background: url('../img/bg-top.png') no-repeat 0 0
+	background-size: cover 
+	.header__top
+		margin-bottom: 440px
+		background: rgba($grey, 0.8)
+	.header__top, .header__bottom
+		padding: 20px 0
+	.header__bottom
+		background: rgba($light-grey, 0.5)
+	.header__nav, .advantage
+		padding-left: 322px
+		+box
+	.header__block 
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 2
+
+//nav
+.nav
+	font-size: 0
+	li
+		margin-left: 38px
+		display: inline-block
+		a
+			font-size: 13px
+			color: $white
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+
+//advantage
+.advantage
+	font-size: 0
+	.advantage__item
+		width: 20%
+		text-align: center
+		display: inline-block
+	.advantage__img
+		height: 110px
+		line-height: 110px
+	.advantage__ico
+		vertical-align: middle
+	.advantage__text
+		font-size: 13px
+
+//ico
+.ico
+	display: inline-block
+	&.ico_1
+		+s(arr1)
+	&.ico_2
+		+s(arr2)
+	&.ico_3
+		+s(arr3)
+	&.ico_4
+		+s(arr4)
+	&.ico_5
+		+s(arr5)
+
+//logo
+.logo
+	display: inline-block
+
+//btn
+.btn 
+	width: 239px
+	height: 57px
+	color: $white
+	line-height: 56px
+	text-align: center
+	font-size: 16px
+	font-weight: 700
+	display: inline-block
+	+box
+	&:first-letter
+		text-transform: uppercase
+	&.btn_red	
+		background: $red
+	&.btn_border
+		border: 2px dashed $red
+		background: none
+
+.title
+	text-transform: uppercase
+	font-weight: 700
+	&.title_line
+		position: relative
+		line-height: 1
+		text-align: center
+		font-size: 32px
+		&:before
+			position: absolute
+			content: ''
+			left: 0
+			top: 50%
+			margin-top: -3px
+			height: 6px
+			width: 100%
+			border-top: 1px solid $light-grey2
+			border-bottom: 1px solid $light-grey2
+		span
+			position: relative
+			padding: 0 20px
+			overflow: hidden
+			z-index: 1
+			background: $white
+			display: inline-block
+
+//designer
+.designer
+	padding: 72px 42px 120px
+	width: 322px
+	line-height: 1.2
+	text-align: center
+	font-size: 21px
+	background: url('../img/bg-grey.png') repeat 0 0
+	+box
+	.designer__logo 
+		+s(logo-big)
+	.designer__text
+		margin: 84px 0 50px
+		p
+			margin-bottom: 15px
+	.designer__row
+		margin-bottom: 22px
+
+//clothing
+.clothing
+	padding: 42px 0 0
+
+//tab
+.clothing__tab
+	margin-top: 12px
+	.tab
+		font-size: 0
+		text-align: center
+		overflow: hidden  
+	.tab__item
+		display: inline-block
+		&.is-active
+			.tab__link
+				color: $white
+				background: $red
+	.tab__link 
+		padding: 10px 20px
+		color: $black
+		font-size: 16px
+		font-weight: 300
+		text-decoration: none  
+		display: block 
+		background: none
+	.tab-cont
+		
+
+// slider
+.slider
+	position: relative
+	padding: 70px 0
+	.slick-slide
+		font-size: 0
+		a
+			margin-left: -18px
+			display: inline-block
+	.slick-prev, .slick-next
+		position: absolute
+		top: 50%
+		margin-top: -56px
+		&:hover
+			+opacity(0.8)
+	.slick-prev
+		left: -100px
+		+s(prev-ico) 
+	.slick-next
+		right: -100px
+		+s(next-ico)
+
+	.slick-dots
+		display: none !important
+
+//footer
+.footer, .push
+	height: 155px
