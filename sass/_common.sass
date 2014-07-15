@@ -52,8 +52,11 @@
 
 $white: #fff
 $grey: #313131
+$grey1: #292929
 $light-grey: #303030
+$light-grey1: #404040
 $light-grey2: #dfdfdf
+$light-grey3: #c7c7c7
 $red: #ee254a
 $black: #2b2b2b
 
@@ -71,7 +74,7 @@ body
 	min-height: 100%
 	height: auto !important
 	height: 100%
-	margin: 0 auto -155px
+	margin: 0 auto -115px
 
 //container
 .container
@@ -89,12 +92,14 @@ body
 	overflow: hidden
 	background: url('../img/bg-top.png') no-repeat 0 0
 	background-size: cover 
-	.header__top
+	.header__wrap
 		margin-bottom: 440px
+		background: $grey
 		background: rgba($grey, 0.8)
-	.header__top, .header__bottom
+	.header__wrap, .header__bottom
 		padding: 20px 0
 	.header__bottom
+		background: $light-grey
 		background: rgba($light-grey, 0.5)
 	.header__nav, .advantage
 		padding-left: 322px
@@ -104,6 +109,89 @@ body
 		top: 0
 		left: 0
 		z-index: 2
+	.header__login
+		.btn_red
+			padding: 0 15px 0 18px
+			width: auto
+
+//topic
+.topic
+	left: 0
+	top: 0
+	width: 100%
+	height: 58px
+	line-height: 53px
+	z-index: 300
+	background: $grey
+	&.is-active
+		.login
+			display: block
+		.topic__wrap
+			display: none
+	.btn, li
+		vertical-align: middle
+	.topic__logo, .topic__nav
+		float: left
+	.topic__logo
+		margin-top: 16px
+	.topic__right
+		float: right
+	.btn
+		margin-left: 20px
+		height: 40px
+		width: 148px
+		font-size: 13px
+		line-height: 39px
+	&.topic_mod
+		position: fixed
+		visibility: hidden
+		+opacity(0)
+		+transition(all 0.5s linear)
+		&.is-active
+			visibility: visible
+			opacity: 1
+
+
+// login
+.login
+	position: relative
+	float: left
+	margin-left: 182px
+	padding-right: 170px
+	display: none
+	.btn_close
+		position: absolute
+		top: 50%
+		right: 0
+		margin-top: -13px
+	.input, .input__row
+		display: inline-block
+	.input
+		height: 40px
+		vertical-align: middle
+	.input__row
+		margin-left: 22px
+		width: 148px
+		vertical-align: top
+
+// input
+.input
+	.input__row
+		+box
+	input
+		padding: 0 10px 0 18px
+		height: 100%
+		width: 100%
+		color: #c2c2c2
+		line-height: 36px
+		border: 2px solid #494949
+		background: $grey1
+		display: block
+		+box
+		+placeholder-color(#c2c2c2)
+		&:focus
+			+placeholder
+				font-size: 0
 
 //nav
 .nav
@@ -121,10 +209,12 @@ body
 //advantage
 .advantage
 	font-size: 0
+	+clr
 	.advantage__item
+		float: left
 		width: 20%
 		text-align: center
-		display: inline-block
+		display: block
 	.advantage__img
 		height: 110px
 		line-height: 110px
@@ -146,10 +236,35 @@ body
 		+s(arr4)
 	&.ico_5
 		+s(arr5)
+	&.ico_arrow
+		+s(ico_arrow)
+	&.ico_6
+		+s(arr6)
+	&.ico_7
+		+s(arr7)
+	&.ico_8
+		+s(arr8)
+	&.ico_9
+		+s(arr9)
+	&.ico_10
+		+s(arr10)
+	&.ico_ins
+		+s(ins)
+	&.ico_f
+		+s(f)
+	&.ico_tw
+		+s(tw)
+	&.ico_vk
+		+s(vk)
+	&.ico_basket
+		+s(basket)
+	&.ico_exit
+		+s(exit)
 
 //logo
 .logo
 	display: inline-block
+	+s(logo)
 
 //btn
 .btn 
@@ -166,18 +281,35 @@ body
 		text-transform: uppercase
 	&.btn_red	
 		background: $red
+		.ico
+			margin-left: 5px
 	&.btn_border
 		border: 2px dashed $red
 		background: none
-
+	&.btn_basket
+		border: 2px dashed #636363
+		background: #464646
+	&.btn_dashed
+		width: auto
+		height: 16px
+		line-height: 15px
+		border-bottom: 1px dashed $white
+		background: none
+	&.btn_close
+		+s(close)
+		
+//title
 .title
 	text-transform: uppercase
 	font-weight: 700
+	&.title-1
+		font-size: 32px
+	&.title-2
+		font-size: 24px
 	&.title_line
 		position: relative
 		line-height: 1
 		text-align: center
-		font-size: 32px
 		&:before
 			position: absolute
 			content: ''
@@ -195,6 +327,21 @@ body
 			z-index: 1
 			background: $white
 			display: inline-block
+	&.title_line-2
+		line-height: 58px
+		text-align: center
+		display: inline-block
+		border-top: 1px solid $white
+		border-bottom: 1px solid $white
+	&.title_quote
+		padding: 0 50px 0 40px
+		color: $white
+		line-height: 84px
+		font-size: 40px
+		display: inline-block
+		background: url('../img/bg-grey.png')
+		span
+			color: $red
 
 //designer
 .designer
@@ -240,19 +387,26 @@ body
 		display: block 
 		background: none
 	.tab-cont
+		position: relative
+		padding: 70px 0 110px
+		.btn
+			position: absolute
+			left: 50%
+			bottom: -28px
+			margin-left: -120px
 		
-
 // slider
 .slider
 	position: relative
-	padding: 70px 0
 	.slick-slide
+		height: 222px
 		font-size: 0
 		a
 			margin-left: -18px
+			vertical-align: top
 			display: inline-block
 	.slick-prev, .slick-next
-		position: absolute
+		position: absolute 
 		top: 50%
 		margin-top: -56px
 		&:hover
@@ -267,6 +421,128 @@ body
 	.slick-dots
 		display: none !important
 
+//order
+.order
+	padding: 100px 0 110px
+	color: $white
+	border-top: 2px solid $red
+	border-bottom: 2px solid $red
+	background: url('../img/bg-cent.png') no-repeat 0 0
+	background-size: cover
+	.order__text-top
+		font-weight: 300
+		font-size: 20px
+	.order__field
+		margin-top: 30px
+		+clr
+	.order__item
+		float: left
+		margin-left: 3%
+		width: 17%
+		&:first-child
+			margin-left: 0
+	.order__img
+		height: 180px
+		text-align: center
+		line-height: 180px
+	.order__ico
+		vertical-align: middle
+	.title
+		display: block
+	.title, .order__text-top
+		text-align: center
+	.order__text
+		margin-top: 25px
+
+//
+.quote
+	background: url('../img/bg-quote.png') no-repeat 0 0
+	background-size: cover
+	.quote__wrap
+		padding: 180px 0 53px
+		color: $white
+		text-align: center
+		background: url('../img/t-shirt.png') no-repeat 50% 100%
+	.quote__text
+		position: relative
+		margin-bottom: 275px
+		padding: 35px 0 0 80px
+		width: 630px
+		font-size: 19px
+		text-align: left
+		display: inline-block
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			+s(quotes)
+	.quote__text-left
+		padding: 50px 110px 0 0
+		font-size: 16px
+		font-style: italic
+		font-weight: 300
+		text-align: right
+
+//styling
+.styling
+	padding: 55px 0 75px
+	text-align: center
+	border-top: 2px solid $red
+	background: url('../img/bg-styling.png') no-repeat 0 0
+	background-size: cover 
+	.styling__text
+		font-weight: 300
+		font-size: 20px
+	.styling__row
+		margin-top: 40px
+	.styling__item
+		margin-right: 30px
+		display: inline-block
+	.btn
+		margin-bottom: 10px
+	.btn_border
+		color: $black
+
 //footer
 .footer, .push
-	height: 155px
+	height: 115px
+.footer
+	color: $light-grey3
+	.footer__top
+		padding: 16px 0
+		background: $grey
+		+clr
+	.footer__logo
+		float: left
+	.footer__nav
+		float: left
+		li
+			height: 23px
+			line-height: 22px
+		a
+			color: $light-grey3
+			vertical-align: middle
+	.soc
+		float: right
+	.soc__item
+		margin-left: 40px
+		height: 25px
+		line-height: 25px
+		display: inline-block
+		.ico
+			vertical-align: middle
+	.footer__bottom
+		border-top: 2px solid $light-grey1
+		background: $grey1
+	.copyright
+		height: 56px
+		line-height: 56px
+		text-align: center
+		font-size: 12px
+		text-transform: uppercase
+
+// js
+
+.js-login-block
+	display: none

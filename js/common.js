@@ -1,8 +1,27 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	$(document).on("click", function(){
+
+	});
+
+	$('.js-login').click(function(){
+		$('.js-topic').addClass('is-active');
+	});
+	$('.js-close').click(function(){
+		$('.js-topic').removeClass('is-active');
+	});
+
+
+	//scroll
+	$(window).scroll(function(){
+		var js_scroll = $(window).scrollTop();
+		if ( js_scroll > 650 ) { 
+			$(".js-top-nav").addClass('is-active'); 
+		}
+		else { 
+			$(".js-top-nav").removeClass('is-active'); 
+		};
+	});
 
 	//tab
 	function tab() {
@@ -25,6 +44,8 @@ head.ready(function() {
 	}
 	tab();
 
+
+	//slick
 	$('.responsive').slick({
 		dots: true,
 		infinite: true,
@@ -33,7 +54,7 @@ head.ready(function() {
 		slidesToScroll: 1,
 		responsive: [
 		{
-			breakpoint: 1480,
+			breakpoint: 1000,
 			settings: {
 				slidesToShow: 4,
 				slidesToScroll: 1,

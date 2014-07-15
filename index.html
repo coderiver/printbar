@@ -14,6 +14,29 @@
 <div class="out">
 	<!-- BEGIN header -->
 	<div class="header">
+		<!-- BEGIN header__top -->
+		<div class="header__top topic topic_mod js-top-nav">
+			<!-- BEGIN container -->
+			<div class="container">
+				<a href="#" class="topic__logo logo"></a>
+				<!-- BEGIN menu__nav nav -->
+				<ul class="topic__nav nav">
+					<li><a href="#">Готовые дизайны </a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">О проекте</a></li>
+					<li><a href="#">Оферта</a></li>
+				</ul>
+				<!-- END menu__nav -->
+				<div class="topic__right">
+					<button class="btn btn_red">Создать одежду</button>
+					<button class="btn btn_basket"><i class="ico ico_basket"></i> Корзина <span>(3)</span></button>
+					<button class="btn btn_dashed">Войти <i class="ico ico_exit"></i></button>
+				</div>
+			</div>
+			<!-- END container -->
+		</div>
+		<!-- END header__top -->
 		<!-- BEGIN container -->
 		<div class="container container_rel">
 			<!-- BEGIN header__block designer -->
@@ -34,8 +57,8 @@
 			<!-- END header__block -->
 		</div>
 		<!-- END container -->
-		<!-- BEGIN header__top -->
-		<div class="header__top">
+		<!-- BEGIN header__wrap -->
+		<div class="header__wrap">
 			<!-- BEGIN container -->
 			<div class="container">
 				<!-- BEGIN header__nav nav -->
@@ -50,41 +73,45 @@
 			</div>
 			<!-- END container -->
 		</div>
-		<!-- END header__top -->
+		<!-- END header__wrap -->
 		<!-- BEGIN header__bottom -->
 		<div class="header__bottom">
 			<!-- BEGIN container advantage -->
-			<div class="container advantage">
-				<div class="advantage__item">
-					<div class="advantage__img">
-						<div class="advantage__ico ico ico_1"></div>
+			<div class="container">
+				<!-- BEGIN advantage -->
+				<div class="advantage">
+					<div class="advantage__item">
+						<div class="advantage__img">
+							<div class="advantage__ico ico ico_1"></div>
+						</div>
+						<div class="advantage__text">Принт не только<br> по центру, а по<br> всему изделию</div>
 					</div>
-					<div class="advantage__text">Принт не только<br> по центру, а по<br> всему изделию</div>
-				</div>
-				<div class="advantage__item">
-					<div class="advantage__img">
-						<div class="advantage__ico ico ico_2"></div>
+					<div class="advantage__item">
+						<div class="advantage__img">
+							<div class="advantage__ico ico ico_2"></div>
+						</div>
+						<div class="advantage__text">Одежда<br> выдерживает<br> 100 стирок</div>
 					</div>
-					<div class="advantage__text">Одежда<br> выдерживает<br> 100 стирок</div>
-				</div>
-				<div class="advantage__item">
-					<div class="advantage__img">
-						<div class="advantage__ico ico ico_3"></div>
+					<div class="advantage__item">
+						<div class="advantage__img">
+							<div class="advantage__ico ico ico_3"></div>
+						</div>
+						<div class="advantage__text">Дизайн из<br> ваших любимых<br> изображений</div>
 					</div>
-					<div class="advantage__text">Дизайн из<br> ваших любимых<br> изображений</div>
-				</div>
-				<div class="advantage__item">
-					<div class="advantage__img">
-						<div class="advantage__ico ico ico_4"></div>
+					<div class="advantage__item">
+						<div class="advantage__img">
+							<div class="advantage__ico ico ico_4"></div>
+						</div>
+						<div class="advantage__text">Создайте дизайн<br> прямо из дома<br> за пару минут!</div>
 					</div>
-					<div class="advantage__text">Создайте дизайн<br> прямо из дома<br> за пару минут!</div>
-				</div>
-				<div class="advantage__item">
-					<div class="advantage__img">
-						<div class="advantage__ico ico ico_5"></div>
+					<div class="advantage__item">
+						<div class="advantage__img">
+							<div class="advantage__ico ico ico_5"></div>
+						</div>
+						<div class="advantage__text">Большой банк<br> уже готовых<br> изображений</div>
 					</div>
-					<div class="advantage__text">Большой банк<br> уже готовых<br> изображений</div>
 				</div>
+				<!-- END advantage -->
 			</div>
 			<!-- END container -->
 		</div>
@@ -93,7 +120,7 @@
 	<!-- END header -->
 	<!-- BEGIN container -->
 	<div class="container clothing">
-		<h3 class="title title_line"><span>Готовая одежда</span></h3>
+		<h3 class="title title-1 title_line"><span>Готовая одежда</span></h3>
 		<!-- BEGIN tab -->
 		<div class="clothing__tab js-tab-group">
 		  <!-- tab list -->
@@ -120,6 +147,7 @@
 				<div><a href="#"><img src="img/img3.png" alt="img"></a></div>
 			</div>
 		  	<!-- END slider slick -->
+		  	<button class="btn btn_red">Вся коллекция <i class="ico ico_arrow"></i></button>
 	  </div>
 		  <div class="tab-cont js-tab-cont js-tab2">
 			<!-- BEGIN slider slick -->
@@ -134,14 +162,142 @@
 				<div><a href="#"><img src="img/img3.png" alt="img"></a></div>
 			</div>
 		  	<!-- END slider slick -->
+		  	<button class="btn btn_red">Вся коллекция <i class="ico ico_arrow"></i></button>
 		  </div>
 		  <!-- END tab content -->
 		</div>
 		<!-- END tab -->
 	</div>
 	<!-- END container -->
+	<!-- BEGIN order -->
+	<div class="order">
+		<!-- BEGIN container -->
+		<div class="container">
+			<h3 class="title title-1">Как заказать одежду с 3D печатью?</h3>
+			<div class="order__text-top">мы позаботились обо всем заранее</div>
+			<div class="order__field">
+				<div class="order__item">
+					<div class="order__img"><i class="order__ico ico ico_6"></i></div>
+					<h3 class="title title-2 title_line-2">дизайн</h3>
+					<div class="order__text">
+						Вы можете создать дизайн своего изделия сами - это элементарно! Или вам поможет наша команда профессиональных дизайнеров.
+					</div>
+				</div>
+				<div class="order__item">
+					<div class="order__img"><i class="order__ico ico ico_7"></i></div>
+					<h3 class="title title-2 title_line-2">оплата</h3>
+					<div class="order__text">
+						Вы можете произвести оплату банковской картой, с помощью Яндекс деньги, Qiwi, WebMoney и наличными при получении.
+					</div>
+				</div>
+				<div class="order__item">
+					<div class="order__img"><i class="order__ico ico ico_8"></i></div>
+					<h3 class="title title-2 title_line-2">Производство</h3>
+					<div class="order__text">
+						После заказа Ваша толстовка или футболка будет изготовлена методом прямой печати на высококачественном оборудовании и отправлена по Вашему адресу.
+					</div>
+				</div>
+				<div class="order__item">
+					<div class="order__img"><i class="order__ico ico ico_9"></i></div>
+					<h3 class="title title-2 title_line-2">Доставка</h3>
+					<div class="order__text">
+						Мы бесплатно доставим вам кейс в Москву курьером или вышлем экспресс-почтой в любой уголок России
+					</div>
+				</div>
+				<div class="order__item">
+					<div class="order__img"><i class="order__ico ico ico_10"></i></div>
+					<h3 class="title title-2 title_line-2">Гарантия</h3>
+					<div class="order__text">
+						Все наши изделия произведены из высококачественных материалов. Мы гарантируем замену изделия при обнаружении каких-либо дефектов или повреждений
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END container -->
+	</div>
+	<!-- END order -->
+	<!-- BEGIN quote -->
+	<div class="quote">
+		<div class="quote__wrap">
+			<!-- BEGIN container -->
+			<div class="container">
+				<div class="quote__text">
+					Ощущение, будто я стою посреди переполненной народом комнаты, кричу во весь голос, а никто не слышит...
+					<div class="quote__text-left">- (с) Титаник</div>
+				</div>
+				<div class="title title_quote">
+					с одеждой от printbar <span>вас заметят</span> молча
+				</div>
+			</div>
+			<!-- END container -->
+		</div>
+		
+	</div>
+	<!-- END quote -->
+	<!-- BEGIN styling -->
+	<div class="styling">
+		<!-- BEGIN container -->
+		<div class="container">
+			<h3 class="title title-1">одежда с 3D печатью по всей плоскости ткани</h3>
+			<div class="styling__text">создайте персональный дизайн или выберите готовый</div>
+			<div class="styling__row">
+				<div class="styling__item">
+					<button class="btn btn_red">Создать одежду</button>
+					<p>создайте одежду с <br>вашими снимками</p>
+				</div>
+				<div class="styling__item">
+					<button class="btn btn_border">Готовая коллекция</button>
+					<p>выберите одежду с<br> авторским дизайном</p>
+				</div>
+			</div>
+		</div>
+		<!-- END container -->
+	</div>
+	<!-- END styling -->
 </div>
 <!-- END out-->
+<!-- BEGIN push -->
+<div class="push"></div>
+<!-- END push -->
+<!-- BEGIN footer -->
+<div class="footer">
+	<!-- BEGIN footer__top -->
+	<div class="footer__top">
+		<!-- BEGIN container -->
+		<div class="container">
+			<a href="#" class="footer__logo logo"></a>
+			<!-- BEGIN footer__nav nav -->
+			<ul class="footer__nav nav">
+				<li><a href="#">Готовые дизайны </a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Доставка и оплата</a></li>
+				<li><a href="#">О проекте</a></li>
+				<li><a href="#">Оферта</a></li>
+			</ul>
+			<!-- END footer__nav -->
+			<!-- BEGIN soc -->
+			<ul class="soc">
+				<li class="soc__item"><a class="ico ico_ins" href="#"></a></li>
+				<li class="soc__item"><a class="ico ico_f" href="#"></a></li>
+				<li class="soc__item"><a class="ico ico_tw" href="#"></a></li>
+				<li class="soc__item"><a class="ico ico_vk" href="#"></a></li>
+			</ul>
+			<!-- END soc -->
+		</div>
+		<!-- END container -->
+	</div>
+	<!-- END footer__top -->
+	<!-- BEGIN footer__bottom -->
+	<div class="footer__bottom">
+		<!-- BEGIN container -->
+		<div class="container copyright">
+			&copy; 2014 PRINT BAR
+		</div>
+		<!-- END container -->
+	</div>
+	<!-- END footer__bottom -->
+</div>
+<!-- END footer -->
 
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
