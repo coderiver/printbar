@@ -11,16 +11,28 @@
 <body>
 
 <!-- BEGIN  out-->
-<div class="out">
+<div class="out out_catalog">
+	<!-- BEGIN informer -->
+	<div class="informer">
+		<!-- BEGIN container -->
+		<div class="container">
+			<div class="informer__wrap">
+				<button class="consultant"><i class="ico ico_consultant"></i>Онлайн консультант</button>
+				<button class="callback"><i class="ico ico_callback"></i>Обратный звонок</button>
+			</div>
+		</div>
+		<!-- END container -->
+		
+	</div>
+	<!-- END informer -->
 	<!-- BEGIN header -->
-	<div class="header">
-		<!-- BEGIN header__top -->
-		<div class="header__top topic js-topic">
+	<div class="header"><!-- BEGIN header__top -->
+		<div class="header__top topic js-top-nav">
 			<!-- BEGIN container -->
 			<div class="container">
 				<a href="#" class="topic__logo logo"></a>
 				<!-- BEGIN js-block -->
-				<div class="topic__wrap">
+				<div class="topic__wrap js-topic">
 					<!-- BEGIN menu__nav nav -->
 					<ul class="topic__nav nav">
 						<li><a href="#">Готовые дизайны </a></li>
@@ -32,13 +44,13 @@
 					<!-- END menu__nav -->
 					<div class="topic__right">
 						<button class="btn btn_red">Создать одежду</button>
-						<button class="btn btn_basket"><i class="ico ico_basket"></i> Корзина <span>(3)</span></button>
+						<button class="btn btn_basket js-basket"><i class="ico ico_basket"></i> Корзина <span>(3)</span></button>
 						<button class="btn btn_dashed js-login">Войти <i class="ico ico_exit"></i></button>
 					</div>
 				</div>
 				<!-- END js-block -->
 				<!-- BEGIN header__login login -->
-				<div class="header__login login">
+				<div class="header__login login js-login-block">
 					<div class="input">
 						<div class="input__row"><input type="text" placeholder="Логин"></div>
 						<div class="input__row"><input type="text" placeholder="Пароль"></div>
@@ -50,116 +62,456 @@
 				<!-- END header__login login -->
 			</div>
 			<!-- END container -->
+			<!-- BEGIN basket -->
+			<div class="basket js-basket-block">
+				<!-- BEGIN container -->
+				<div class="container">
+					<div class="basket__product product">
+						<div class="product__item js-product">
+							<a href="#" class="product__img"><img src="img/img6.png" alt="img"></a>
+							<div class="product__block">
+								<a href="#" class="title title-2">Colored circles</a>
+								<p>мужская футболка</p>
+								<div class="product__row"> 
+									<div class="product__select select js-select">
+									    <span class="select__text js-select-text">M (47)</span>
+									    <input type="hidden" class="js-select-input" value="0">
+									    <ul class="select__list js-select-list">
+									        <li data-id="0">var0</li>
+									        <li data-id="1">var1</li>
+									        <li data-id="2">var2</li>
+									        <li data-id="3">var3</li>
+									    </ul>
+									</div>
+									<div class="product__select select js-select">
+									    <span class="select__text js-select-text">1 шт</span>
+									    <input type="hidden" class="js-select-input" value="0">
+									    <ul class="select__list js-select-list">
+									        <li data-id="0">var0</li>
+									        <li data-id="1">var1</li>
+									        <li data-id="2">var2</li>
+									        <li data-id="3">var3</li>
+									    </ul>
+									</div>
+								</div>
+							</div>
+							<div class="product__right">
+								<div class="product__price price"><strong>1500</strong> руб</div>
+								<button class="btn btn_dashed js-delete">удалить</button>
+							</div>
+						</div>
+						<div class="product__item js-product">
+							<a href="#" class="product__img"><img src="img/img6.png" alt="img"></a>
+							<div class="product__block">
+								<a href="#" class="title title-2">Colored circles</a>
+								<p>мужская футболка</p>
+								<div class="product__row"> 
+									<div class="product__select select js-select">
+									    <span class="select__text js-select-text">M (46)</span>
+									    <input type="hidden" class="js-select-input" value="0">
+									    <ul class="select__list js-select-list">
+									        <li data-id="0">var0</li>
+									        <li data-id="1">var1</li>
+									        <li data-id="2">var2</li>
+									        <li data-id="3">var3</li>
+									    </ul>
+									</div>
+									<div class="product__select select js-select">
+									    <span class="select__text js-select-text">1 шт</span>
+									    <input type="hidden" class="js-select-input" value="0">
+									    <ul class="select__list js-select-list">
+									        <li data-id="0">var0</li>
+									        <li data-id="1">var1</li>
+									        <li data-id="2">var2</li>
+									        <li data-id="3">var3</li>
+									    </ul>
+									</div>
+								</div>
+							</div>
+							<div class="product__right">
+								<div class="product__price price"><strong>1500</strong> руб</div>
+								<button class="btn btn_dashed js-delete">удалить</button>
+							</div>
+						</div>
+						<div class="product__item js-product">
+							<a href="#" class="product__img"><img src="img/img6.png" alt="img"></a>
+							<div class="product__block">
+								<a href="#" class="title title-2">Colored circles</a>
+								<p>мужская футболка</p>
+								<div class="product__row"> 
+									<div class="product__select select js-select">
+									    <span class="select__text js-select-text">M (48)</span>
+									    <input type="hidden" class="js-select-input" value="0">
+									    <ul class="select__list js-select-list">
+									        <li data-id="0">var0</li>
+									        <li data-id="1">var1</li>
+									        <li data-id="2">var2</li>
+									        <li data-id="3">var3</li>
+									    </ul>
+									</div>
+									<div class="product__select select js-select">
+									    <span class="select__text js-select-text">1 шт</span>
+									    <input type="hidden" class="js-select-input" value="0">
+									    <ul class="select__list js-select-list">
+									        <li data-id="0">var0</li>
+									        <li data-id="1">var1</li>
+									        <li data-id="2">var2</li>
+									        <li data-id="3">var3</li>
+									    </ul>
+									</div>
+								</div>
+							</div>
+							<div class="product__right">
+								<div class="product__price price"><strong>1500</strong> руб</div>
+								<button class="btn btn_dashed js-delete">удалить</button>
+							</div>
+						</div>
+					</div>
+					<div class="basket__form form">
+						<div class="form__wrap">
+							<button class="btn btn_close btn-close-basket"></button>
+							<div class="basket__top">
+								<span>Ваш заказ </span>
+								<span class="basket__price price"><strong>23 400</strong> руб.</span>
+							</div>
+							<p>ориентировочная дата доставки: 15 июля 2014</p>
+							<!-- BEGIN input -->
+							<div class="basket__input input">
+								<div class="input__row">
+									<div class="input__col input__col_2"><input type="text" placeholder="Ваше имя"></div>
+									<div class="input__col input__col_2"><input type="text" placeholder="Ваша фамилия"></div>
+								</div>
+								<div class="input__row">
+									<div class="input__col input__col_2"><input type="text" placeholder="e-mail"></div>
+									<div class="input__col input__col_2"><input type="text" placeholder="телефон"></div>
+								</div>
+								<div class="input__row">
+									<input type="text" placeholder="Город / поселок / деревня :)">
+								</div>
+								<div class="input__row">
+									<div class="input__col input__col_1"><input type="text" placeholder="Индекс"></div>
+									<div class="input__col input__col_3"><input type="text" placeholder="Улица"></div>
+								</div>
+								<div class="input__row">
+									<div class="input__col input__col_1"><input type="text" placeholder="Корпус"></div>
+									<div class="input__col input__col_1"><input type="text" placeholder="Дом"></div>
+									<div class="input__col input__col_1"><input type="text" placeholder="Квартира"></div>
+								</div>
+							</div>
+							<!-- END input -->
+							<!-- BEGIN checkbox -->
+							<label class="basket__checkbox checkbox">
+							    <input type="checkbox">
+							    <span>Я хочу получать спам в неограниченных количествах</span>
+							</label>
+							<!-- END checkbox -->
+							<div class="basket__row">
+								<button class="btn btn_red">Оформить заказ</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- END container -->
+			</div>
+			<!-- END basket -->
 		</div>
 		<!-- END header__top -->
-		<!-- BEGIN basket -->
-		<div class="basket">
-			<!-- BEGIN container -->
-			<div class="container">
-				<div class="basket__product product">
-					<div class="product__item">
-						<div class="product__img"><img src="img/img1.png" alt="img"></div>
-						<div class="product__block">
-							<h3 class="title">Colored circles</h3>
-							<p>мужская футболка</p>
-						</div>
-						<div class="product__price"><strong>1500</strong> руб</div>
-						<button class="btn btn_dashed js-delete">удалить</button>
-					</div>
-					<div class="product__item">
-						<div class="product__img"><img src="img/img1.png" alt="img"></div>
-						<div class="product__block">
-							<h3 class="title">Colored circles</h3>
-							<p>мужская футболка</p>
-						</div>
-						<div class="product__price"><strong>1500</strong> руб</div>
-						<button class="btn btn_dashed js-delete">удалить</button>
-					</div>
-					<div class="product__item">
-						<div class="product__img"><img src="img/img1.png" alt="img"></div>
-						<div class="product__block">
-							<h3 class="title">Colored circles</h3>
-							<p>мужская футболка</p>
-						</div>
-						<div class="product__price"><strong>1500</strong> руб</div>
-						<button class="btn btn_dashed js-delete">удалить</button>
-					</div>
-				</div>
-				<div class="basket__form">
-					
-				</div>
-			</div>
-			<!-- END container -->
-			
-		</div>
-		<!-- END basket -->
 	</div>
 	<!-- END header -->
-	<!-- BEGIN container -->
-	<div class="container clothing">
-		<h3 class="title title-1 title_line"><span>Готовая одежда</span></h3>
-		<!-- BEGIN tab -->
-		<div class="clothing__tab js-tab-group">
-		  <!-- tab list -->
-		  <ul class="tab js-tab">
-		    <li class="tab__item">
-		      <a href="js-tab1" class="tab__link">футболки</a>
-		    </li>
-		    <li class="tab__item">
-		      <a href="js-tab2" class="tab__link">толстовки</a>
-		    </li>
-		  </ul>
-		  <!-- END tab list -->
-		  <!-- tab content -->
-		  <div class="tab-cont js-tab-cont js-tab1">
-		  	<!-- BEGIN slider slick -->
-			<div class="slider responsive">
-				<div><a href="#"><img src="img/img1.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img2.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img3.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img4.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img5.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img1.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img2.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img3.png" alt="img"></a></div>
-			</div>
-		  	<!-- END slider slick -->
-		  	<button class="btn btn_red">Вся коллекция <i class="ico ico_arrow"></i></button>
-	  </div>
-		  <div class="tab-cont js-tab-cont js-tab2">
-			<!-- BEGIN slider slick -->
-			<div class="slider responsive">
-				<div><a href="#"><img src="img/img1.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img2.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img3.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img4.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img5.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img1.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img2.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img3.png" alt="img"></a></div>
-			</div>
-		  	<!-- END slider slick -->
-		  	<button class="btn btn_red">Вся коллекция <i class="ico ico_arrow"></i></button>
-		  </div>
-		  <!-- END tab content -->
-		</div>
-		<!-- END tab -->
-	</div>
-	<!-- END container -->
-	<!-- BEGIN styling -->
-	<div class="styling">
+	<!-- BEGIN clothing -->
+	<div class="clothing clothing_mod js-tab-group">
 		<!-- BEGIN container -->
 		<div class="container">
-			<h3 class="title title-1">одежда с 3D печатью по всей плоскости ткани</h3>
-			<div class="styling__text">создайте персональный дизайн или выберите готовый</div>
+			<h3 class="title title-1 title_line"><span>Готовая одежда</span></h3>
+			<!-- BEGIN tab -->
+			<div class="clothing__tab">
+				<!-- tab list -->
+				<ul class="tab tab_mod js-tab">
+				    <li class="tab__item">
+				      <a href="js-tab1" class="tab__link">футболки</a>
+				    </li>
+				    <li class="tab__item">
+				      <a href="js-tab2" class="tab__link">толстовки</a>
+				    </li>
+				</ul>
+				<!-- END tab list -->
+			</div>
+			<!-- END tab -->
+		</div>
+		<!-- END container -->
+		<!-- tab content -->
+		<div class="tab-cont tab-cont_mod js-tab-cont js-tab1">
+			<!-- BEGIN clothing__item -->
+			<div class="clothing__item js-shirt-block">
+				<!-- BEGIN container -->
+				<div class="container">
+					<!-- BEGIN slider slick -->
+					<div class="clothing__slider single-item">
+						<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
+						<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
+						<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
+						<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
+					</div>
+				  	<!-- END slider slick -->
+				  	<!-- BEGIN clothing__info -->
+				  	<div class="clothing__info">
+				  		<h3 class="title title-1">Colored circles</h3>
+				  		<div class="clothing__price">1500 руб.</div>
+				  		<div class="clothing__row">
+				  			<div class="clothing__link">
+				  				<a href="#">Информация о товаре</a>
+				  				<a href="#">Доставка</a>
+				  			</div>
+							<p>Для изготовления футболки используется только высококачественный трикотаж и экологически чистые красители на водной основе.</p>
+							<p>Футболка выполнена без боковых швов, не садится после стирки. </p>
+				  		</div>
+				  		<div class="clothing__row">
+				  			<div class="clothing__select select js-select">
+					  		    <span class="select__text js-select-text">M (48)</span>
+					  		    <input type="hidden" class="js-select-input" value="0">
+					  		    <ul class="select__list js-select-list">
+					  		        <li data-id="0">var0</li>
+					  		        <li data-id="1">var1</li>
+					  		        <li data-id="2">var2</li>
+					  		        <li data-id="3">var3</li>
+					  		    </ul>
+					  		</div>
+					  		<button class="btn btn_red">Заказать</button>
+				  		</div>
+				  	</div>
+				  	<!-- END clothing__info -->
+				</div>
+				<!-- END container -->
+			</div>
+			<!-- END clothing__item -->
+		  	<!-- BEGIN clothing__field -->
+		  	<div class="container clothing__field">
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt is-active">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+		  	</div>
+		  	<!-- END clothing__field -->
+  		</div>
+  		<!-- END tab content -->
+  		<div class="tab-cont tab-cont_mod js-tab-cont js-tab2">
+			<!-- BEGIN clothing__item -->
+			<div class="clothing__item js-shirt-block">
+				<!-- BEGIN container -->
+				<div class="container">
+					<!-- BEGIN slider slick -->
+					<div class="clothing__slider single-item">
+						<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
+						<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
+						<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
+					</div>
+					<!-- END slider slick -->
+					<!-- BEGIN clothing__info -->
+					<div class="clothing__info">
+				  		<h3 class="title title-1">Colored circles</h3>
+				  		<div class="clothing__price">1600 руб.</div>
+				  		<div class="clothing__row">
+				  			<div class="clothing__link">
+				  				<a href="#">Информация о товаре</a>
+				  				<a href="#">Доставка</a>
+				  			</div>
+							<p>Для изготовления футболки используется только высококачественный трикотаж и экологически чистые красители на водной основе.</p>
+							<p>Футболка выполнена без боковых швов, не садится после стирки. </p>
+				  		</div>
+				  		<div class="clothing__row">
+				  			<div class="clothing__select select js-select">
+					  		    <span class="select__text js-select-text">M (48)</span>
+					  		    <input type="hidden" class="js-select-input" value="0">
+					  		    <ul class="select__list js-select-list">
+					  		        <li data-id="0">var0</li>
+					  		        <li data-id="1">var1</li>
+					  		        <li data-id="2">var2</li>
+					  		        <li data-id="3">var3</li>
+					  		    </ul>
+					  		</div>
+					  		<button class="btn btn_red">Заказать</button>
+				  		</div>
+				  	</div>
+					<!-- END clothing__info -->
+				</div>
+				<!-- END container -->
+			</div>
+			<!-- END clothing__item -->	
+			<!-- BEGIN clothing__field -->
+		  	<div class="container clothing__field">
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1500 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1500 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1500 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1500 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1500 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1500 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1500 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1500 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1500 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1500 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1500 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1500 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1500 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+				<div class="clothing__shirt shirt js-shirt">
+					<div class="shirt__img"><img src="img/img8.png" alt="img"></div>
+					<span class="shirt__price">1700 руб</span>
+				</div>
+		  	</div>
+		  	<!-- END clothing__field -->
+		</div>
+		<!-- END tab content -->
+	</div>
+	<!-- END clothing -->
+	<!-- BEGIN styling -->
+	<div class="styling styling_mod">
+		<!-- BEGIN container -->
+		<div class="container">
+			<button class="btn btn_bgn">Показать еще<i class="ico ico_bgn"></i></button>
+			<div class="styling__row">
+				<div class="styling__text">не нашли подходящий дизайн одежды?</div>
+			</div>
 			<div class="styling__row">
 				<div class="styling__item">
-					<button class="btn btn_red">Создать одежду</button>
-					<p>создайте одежду с <br>вашими снимками</p>
-				</div>
-				<div class="styling__item">
-					<button class="btn btn_border">Готовая коллекция</button>
-					<p>выберите одежду с<br> авторским дизайном</p>
+					<button class="btn btn_red">Создать одежду сами!</button>
 				</div>
 			</div>
 		</div>

@@ -1,16 +1,64 @@
 head.ready(function() {
 
-	$(document).on("click", function(){
+	$(document).click(function() {
+        $(".js-select-list").hide();
+        $(".js-select").removeClass("is-active");
+    });
 
-	});
 
 	$('.js-login').click(function(){
-		$('.js-topic').addClass('is-active');
-	});
-	$('.js-close').click(function(){
-		$('.js-topic').removeClass('is-active');
+		$('.js-topic').hide();
+		$('.js-login-block').show();
 	});
 
+	$('.js-close').click(function(){
+		$('.js-topic').show();
+		$('.js-login-block').hide();
+	});
+
+	$('.js-delete').click(function(){
+		$(this).parents('.js-product').remove();
+	});
+
+	$('.btn-close-basket, .js-basket').click(function(){
+		$('.js-basket-block').slideToggle();
+	});
+
+	// $('.js-shirt').click(function(){
+	// 	$(this).addClass('is-active')
+	// 	$('.js-shirt-block').slideToggle();
+	// });
+	//select
+    function selectList() {
+        var select = $(".js-select");
+        var select_list = $(".js-select-list");
+        $("body").on("click", ".js-select", function(event){
+            if ($(this).hasClass("is-active")) {
+                select.removeClass("is-active");
+                select_list.hide();
+            }
+            else {
+                select.removeClass("is-active");
+                select_list.hide();
+                $(this).find(".js-select-list").show();
+                $(this).addClass("is-active");
+            }
+            event.stopPropagation();
+        });
+        $("body").on("click", ".js-select-list li", function(event){
+            var id = $(this).attr("data-id");
+            var text = $(this).text();
+            $(this).parents(".js-select").find(".js-select-text").text(text);
+            $(this).parents(".js-select").find(".js-select-input").val(id);
+            $(this).parent().hide();
+            $(this).parents(".js-select").removeClass("is-active");
+            event.stopPropagation();
+        });
+    }  
+    selectList();
+    $("body").on("click", ".js-select", function(event){
+        event.stopPropagation();
+    });
 
 	//scroll
 	$(window).scroll(function(){
@@ -29,23 +77,22 @@ head.ready(function() {
 				var tab_link = $(this).find("a");
 				var tab_item = $(this).find("li");
 				var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
-				tab_cont.hide();
+				// tab_cont.hide();
 				tab_item.first().addClass("is-active");
-				$(this).parents(".js-tab-group").find(".js-tab1").show();
+				$(this).parents(".js-tab-group").find(".js-tab1").addClass("is-active");
 				tab_link.on("click", function() {
 					var index = $(this).attr("href");
 					tab_item.removeClass("is-active");
 					$(this).parent().addClass("is-active");
-					tab_cont.hide();
-					$(this).parents(".js-tab-group").find("."+index).show();
+					tab_cont.removeClass('is-active')
+					$(this).parents(".js-tab-group").find("."+index).addClass("is-active");
 					return false;
 				});
 			});
 	}
 	tab();
 
-
-	//slick
+	// slick
 	$('.responsive').slick({
 		dots: true,
 		infinite: true,
@@ -54,14 +101,74 @@ head.ready(function() {
 		slidesToScroll: 1,
 		responsive: [
 		{
-			breakpoint: 1000,
+			breakpoint: 1285,
 			settings: {
 				slidesToShow: 4,
-				slidesToScroll: 1,
-				infinite: true,
-				dots: true
+				slidesToScroll: 1
+			}
+		},
+		{
+		breakpoint: 1200,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1
 			}
 		}
 		]
 	});
+	// ss
+	// $('.responsive').each(function() {
+	//   $( this ).slick({
+	// 		dots: true,
+	// 		infinite: true,
+	// 		speed: 300,
+	// 		slidesToShow: 5,
+	// 		slidesToScroll: 1,
+	// 		responsive: [
+	// 		{
+	// 			breakpoint: 1285,
+	// 			settings: {
+	// 				slidesToShow: 4,
+	// 				slidesToScroll: 1
+	// 			}
+	// 		},
+	// 		{
+	// 		breakpoint: 1200,
+	// 			settings: {
+	// 				slidesToShow: 3,
+	// 				slidesToScroll: 1
+	// 			}
+	// 		}
+	// 		]
+	// 	});
+	// });
+
+
+	//slick
+	// $('.responsive').slick({
+	// 	dots: true,
+	// 	infinite: true,
+	// 	speed: 300,
+	// 	slidesToShow: 5,
+	// 	slidesToScroll: 1,
+	// 	responsive: [
+	// 	{
+	// 		breakpoint: 1285,
+	// 		settings: {
+	// 			slidesToShow: 4,
+	// 			slidesToScroll: 1
+	// 		}
+	// 	},
+	// 	{
+	// 	breakpoint: 1200,
+	// 		settings: {
+	// 			slidesToShow: 3,
+	// 			slidesToScroll: 1
+	// 		}
+	// 	}
+	// 	]
+	// });
+
+	//slick
+	$('.single-item').slick();
 });

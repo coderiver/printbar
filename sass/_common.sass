@@ -75,6 +75,8 @@ body
 	height: auto !important
 	height: 100%
 	margin: 0 auto -115px
+	&.out_catalog
+		overflow: hidden
 
 //container
 .container
@@ -89,9 +91,10 @@ body
 .header
 	color: $white
 	font-weight: 300
-	overflow: hidden
 	background: url('../img/bg-top.png') no-repeat 0 0
 	background-size: cover 
+	&.header_hid
+		overflow: hidden
 	.header__wrap
 		margin-bottom: 440px
 		background: $grey
@@ -123,7 +126,7 @@ body
 	line-height: 53px
 	z-index: 300
 	background: $grey
-	&.is-active
+	.is-open
 		.login
 			display: block
 		.topic__wrap
@@ -150,6 +153,10 @@ body
 		&.is-active
 			visibility: visible
 			opacity: 1
+	@media (max-width: 1150px)
+		.topic__nav
+			li
+				margin-left: 14px
 
 
 // login
@@ -260,6 +267,12 @@ body
 		+s(basket)
 	&.ico_exit
 		+s(exit)
+	&.ico_callback
+		+s(callback)
+	&.ico_consultant
+		+s(consultant)
+	&.ico_bgn
+		+s(bgn)
 
 //logo
 .logo
@@ -297,6 +310,14 @@ body
 		background: none
 	&.btn_close
 		+s(close)
+	&.btn_bgn
+		height: 20px
+		width: auto
+		line-height: 20px
+		color: $red
+		background: none
+		.ico
+			margin-left: 10px
 		
 //title
 .title
@@ -343,6 +364,52 @@ body
 		span
 			color: $red
 
+//informer
+.informer
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 400
+	.container
+		position: relative
+	.informer__wrap
+		position: absolute
+		top: 305px
+		left: -258px
+		padding-left: 40px
+		width: 480px
+		height: 70px
+		overflow: hidden
+		+rotate(-90)
+		&:before
+			position: absolute
+			content: ''
+			top: -33px
+			left: 0
+			height: 30px
+			width: 100%
+			+box-shadow(1px 0px 30px #000000)
+			+border-radius(100%)
+	.ico
+		margin-right: 10px
+	.callback, .consultant
+		padding: 0 20px 0 15px
+		display: inline-block
+		height: 55px
+		line-height: 54px
+		font-size: 16px
+		font-weight: 700
+		vertical-align: top
+		+box-shadow(0 0 10px $black)
+	.callback
+		color: $black
+		background: $white
+	.consultant
+		margin-right: 17px
+		color: $white
+		background: #505050
+
 //designer
 .designer
 	padding: 72px 42px 120px
@@ -364,14 +431,121 @@ body
 //clothing
 .clothing
 	padding: 42px 0 0
+	.tab-cont_mod
+		&.is-active
+			padding: 0
+	.clothing__field
+		position: relative
+		margin-bottom: 1px
+		font-size: 0
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: -1px
+			height: 100%
+			width: 1px
+			overflow: hidden
+			z-index: 10
+			background: $white
+		&:after
+			position: absolute
+			content: ''
+			bottom: -1px
+			left: 0
+			height: 1px
+			width: 100%
+			overflow: hidden
+			z-index: 10
+			background: $white
+
+//clothing-block
+.clothing__item
+	padding: 60px 0 70px
+	color: $white
+	background: url('../img/bg-grey.png') repeat
+	.container
+		width: 1000px
+		+clr
+	.clothing__slider
+		float: left
+		margin-left: 60px
+		width: 404px
+	.clothing__info
+		float: right
+		margin-right: 48px
+		width: 333px
+		+box
+	.clothing__price
+		font-size: 21px
+		font-weight: 300
+	.clothing__row
+		margin-top: 55px
+		.btn_red
+			position: relative
+			left: auto
+			bottom: auto
+			margin: 0
+			padding: 0 36px 0 31px
+			width: auto
+	.clothing__link
+		margin-bottom: 18px
+		a
+			margin-right: 35px
+			color: $white
+			border-bottom: 1px dotted $white
+			text-decoration: none
+			font-size: 17px
+			display: inline-block
+	.clothing__select
+		width: 186px
+		float: left
+		.select__text
+			border-right: none
+
+//shirt
+.shirt
+	margin: 0 0 -1px -1px
+	padding: 47px 0 40px
+	font-size: 18px
+	font-weight: 300
+	color: $light-grey1
+	text-align: center
+	cursor: pointer
+	width: 20%
+	display: inline-block
+	border-left: 1px dotted #aeaeae
+	border-bottom: 1px dotted #aeaeae
+	+box
+	&.is-active
+		position: relative
+		background: url('../img/bg-grey-light.png') repeat
+		border-right: 1px dotted #aeaeae 
+		&:before
+			position: absolute
+			content: ''
+			left: 50%
+			top: -21px
+			margin-left: -40px
+			+s(top-ico)
+	&:hover
+		background: url('../img/bg-grey-light.png') repeat
+	.shirt__img
+		img
+			display: inline-block
+	.shirt__price
+		margin-top: 20px
+		display: inline-block
 
 //tab
 .clothing__tab
-	margin-top: 12px
+	padding: 12px 0 0
 	.tab
 		font-size: 0
 		text-align: center
 		overflow: hidden  
+	.tab_mod
+		padding-bottom: 25px
 	.tab__item
 		display: inline-block
 		&.is-active
@@ -386,18 +560,27 @@ body
 		text-decoration: none  
 		display: block 
 		background: none
-	.tab-cont
-		position: relative
+.tab-cont
+	position: relative
+	padding: 0
+	visibility: hidden
+	height: 0
+	+box
+	+clr
+	&.is-active
 		padding: 70px 0 110px
-		.btn
-			position: absolute
-			left: 50%
-			bottom: -28px
-			margin-left: -120px
+		visibility: visible
+		height: auto
+	.btn
+		position: absolute
+		left: 50%
+		bottom: -28px
+		margin-left: -120px
 		
 // slider
 .slider
 	position: relative
+	margin: 0 auto
 	.slick-slide
 		height: 222px
 		font-size: 0
@@ -419,7 +602,29 @@ body
 		+s(next-ico)
 
 	.slick-dots
-		display: none !important
+		display: none !important 
+	@media (max-width: 1285px)
+		width: 1000px
+	@media (max-width: 1205px)
+		width: 790px
+
+//single-item
+.single-item
+	position: relative
+	.slick-prev, .slick-next
+		position: absolute
+		top: 50%
+		margin-top: -56px
+	.slick-prev
+		left: -57px
+		+s(prev2)
+	.slick-next
+		right: -57px
+		+s(next2)
+	.slick-slide
+		text-align: center
+		img
+			display: inline-block
 
 //order
 .order
@@ -503,6 +708,293 @@ body
 		margin-bottom: 10px
 	.btn_border
 		color: $black
+	&.styling_mod
+		padding-top: 20px
+
+//basket
+.basket
+	position: absolute
+	top: 58px
+	left: 0
+	width: 100%
+	padding: 10px 0 30px
+	color: $white
+	z-index: 300
+	background: url('../img/bg-grey.png') repeat
+	display: none
+	.container
+		+clr
+	.basket__product
+		float: left
+	.basket__form
+		float: right
+		width: 39%
+	.basket__top
+		width: 85%
+		font-size: 24px
+		font-weight: 700
+		text-transform: uppercase
+		+clr
+		.basket__price
+			float: right
+	.basket__input
+		margin-top: 22px
+	.basket__row
+		margin-top: 22px
+		.btn_red
+			width: 100%
+	.basket__checkbox
+		margin-top: 7px
+
+//checkbox
+.checkbox
+	position: relative
+	margin-left: 20px
+	display: inline-block
+	+unselectable
+	input
+		position: absolute
+		left: 0
+		top: 0
+		width: 18px
+		height: 18px
+		opacity: 0
+		z-index: 2
+		&:checked
+			+ span
+				&:after
+					display: block
+	span
+		display: inline-block
+		position: relative
+		padding-left: 30px
+		color: #c2c2c2
+		font-size: 14px
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			width: 18px
+			height: 18px
+			border: 1px solid #494949
+			background: $grey1
+		&:after
+			display: none
+			content: ""
+			position: absolute
+			top: 5px
+			left: 5px
+			height: 10px
+			width: 10px
+			+border-radius(50%)
+			background: $light-grey2
+
+//form
+.form
+	position: relative
+	padding: 10px 0 18px
+	font-size: 15px
+	font-weight: 300
+	overflow: hidden
+	&:before
+		position: absolute
+		content: ''
+		top: 5px
+		left: -10px
+		height: 100%
+		width: 10px
+		+box-shadow(1px 0px 22px 1px #000000)
+		+border-radius(100%)
+	&:after
+		position: absolute
+		content: ''
+		top: 5px
+		right: -10px
+		height: 100%
+		width: 10px
+		+box-shadow(1px 0px 22px 1px #000000)
+		+border-radius(100%)
+	.form__wrap
+		padding: 30px 22px 22px 25px
+		background: $grey
+	.btn_close
+		position: absolute
+		top: 22px
+		right: 22px
+	.input__row
+		height: 57px
+		font-size: 0
+		margin-bottom: 10px
+	input
+		font-weight: 700
+		font-size: 16px
+		// +placeholder
+		// 	font-weight: 700
+		// 	font-size: 16px
+	.input__col
+		margin-left: 2%
+		height: 100%
+		display: inline-block
+		&:first-child
+			margin-left: 0
+	.input__col_1
+		width: 32%
+	.input__col_2
+		width: 49%
+	.input__col_3
+		width: 66%
+
+//product
+.product
+	margin-left: 80px
+	padding: 20px 0 0
+	width: 49%
+	a
+		color: $white
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	.product__item 
+		padding: 30px 0 35px
+		border-top: 1px dotted $light-grey1
+		+clr
+		&:first-child
+			border: none
+	.product__img, .product__block
+		float: left
+	.product__img
+		width: 176px
+		text-align: center
+		img
+			vertical-align: top
+			display: inline-block
+	.product__block
+		font-size: 15px
+		font-weight: 300
+	.product__right
+		float: right
+		width: 106px
+		.btn
+			font-size: 15px
+	.product__price
+	.product__row
+		margin-top: 18px
+		font-size: 0
+	.product__select
+		margin-left: 20px
+		width: 125px
+		display: inline-block
+		&:first-child
+			margin-left: 0
+
+//price
+.price
+	font-size: 17px
+	font-weight: 400
+	text-transform: none
+	strong
+		font-size: 24px
+
+//select
+.select
+	position: relative
+	cursor: pointer
+	font-size: 16px
+	font-weight: 700
+	.select__text
+		position: relative
+		display: block
+		padding: 0 25px 0 20px 
+		height: 57px
+		line-height: 57px
+		border: 1px solid #000
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		border: 2px dashed #636363
+		+box
+		&:after
+			content: ""
+			position: absolute
+			right: 17px
+			top: 50%
+			margin-top: -5px
+			+s(sel-pic)
+	.select__list
+		position: absolute
+		display: none
+		left: 0
+		right: 0
+		top: 100%
+		z-index: 100
+		border: 2px dashed #636363
+		border-top: 0 
+		max-height: 200px
+		overflow-x: hidden
+		overflow-y: auto
+		background: $grey
+		li
+			padding: 5px 11px 
+			cursor: pointer
+			line-height: 1
+			&:hover
+				background: #717791
+				color: #fff 
+
+//content
+.content
+	padding: 40px 0 85px
+	h1, h2, h3
+		text-align: center
+	h2
+		margin: 25px 0 22px
+	h3
+		padding: 20px 0 18px
+		font-size: 20px
+		font-weight: 300
+	p
+		padding-bottom: 10px
+	a
+		color: $red
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	table
+		margin: 35px 0 30px
+		td, th
+			padding-left: 26px
+			height: 61px
+			text-align: left
+			line-height: 61px
+			+box
+			&:first-child
+				width: 195px
+			&:nth-child(2)
+				width: 387px
+		th
+			color: $white
+			font-size: 17px
+			font-weight: 300
+			background: url('../img/bg-grey.png') repeat
+		td
+			border: 1px solid #e3e3e3
+	ul
+		li
+			position: relative
+			padding-left: 12px
+			margin-bottom: 10px
+			&:before
+				position: absolute
+				content: ''
+				top: 5px
+				left: 0
+				+arr(5, 8, $black, r)
+	.content__row
+		text-align: center
+	.title_line-2
+		border-color: $black
+		border-width: 2px
 
 //footer
 .footer, .push
@@ -541,8 +1033,3 @@ body
 		text-align: center
 		font-size: 12px
 		text-transform: uppercase
-
-// js
-
-.js-login-block
-	display: none
