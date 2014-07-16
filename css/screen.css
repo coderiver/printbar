@@ -25,6 +25,7 @@ body { color: #2b2b2b; font-size: 13px; line-height: 1.4; font-weight: 400; font
 .out.out_catalog { overflow: hidden; }
 
 .container { margin: 0 auto; min-width: 1000px; max-width: 1200px; }
+.container.container_pt { padding-top: 40px; }
 .container.container_rel { height: 0; position: relative; }
 
 .header { color: white; font-weight: 300; background: url("../img/bg-top.png") no-repeat 0 0; background-size: cover; }
@@ -280,7 +281,7 @@ body { color: #2b2b2b; font-size: 13px; line-height: 1.4; font-weight: 400; font
 .select .select__list li { padding: 5px 11px; cursor: pointer; line-height: 1; }
 .select .select__list li:hover { background: #717791; color: white; }
 
-.content { padding: 40px 0 85px; }
+.content { padding: 0 18px 85px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .content h1, .content h2, .content h3 { text-align: center; }
 .content h2 { margin: 25px 0 22px; }
 .content h3 { padding: 20px 0 18px; font-size: 20px; font-weight: 300; }

@@ -83,6 +83,8 @@ body
 	margin: 0 auto
 	min-width: 1000px
 	max-width: 1200px
+	&.container_pt
+		padding-top: 40px
 	&.container_rel
 		height: 0
 		position: relative
@@ -952,7 +954,8 @@ body
 
 //content
 .content
-	padding: 40px 0 85px
+	padding: 0 18px 85px
+	+box
 	h1, h2, h3
 		text-align: center
 	h2
