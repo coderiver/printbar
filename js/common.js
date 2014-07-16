@@ -5,7 +5,6 @@ head.ready(function() {
         $(".js-select").removeClass("is-active");
     });
 
-
 	$('.js-login').click(function(){
 		$('.js-topic').hide();
 		$('.js-login-block').show();
@@ -28,6 +27,7 @@ head.ready(function() {
 	// 	$(this).addClass('is-active')
 	// 	$('.js-shirt-block').slideToggle();
 	// });
+
 	//select
     function selectList() {
         var select = $(".js-select");
@@ -116,59 +116,7 @@ head.ready(function() {
 		}
 		]
 	});
-	// ss
-	// $('.responsive').each(function() {
-	//   $( this ).slick({
-	// 		dots: true,
-	// 		infinite: true,
-	// 		speed: 300,
-	// 		slidesToShow: 5,
-	// 		slidesToScroll: 1,
-	// 		responsive: [
-	// 		{
-	// 			breakpoint: 1285,
-	// 			settings: {
-	// 				slidesToShow: 4,
-	// 				slidesToScroll: 1
-	// 			}
-	// 		},
-	// 		{
-	// 		breakpoint: 1200,
-	// 			settings: {
-	// 				slidesToShow: 3,
-	// 				slidesToScroll: 1
-	// 			}
-	// 		}
-	// 		]
-	// 	});
-	// });
-
-
-	//slick
-	// $('.responsive').slick({
-	// 	dots: true,
-	// 	infinite: true,
-	// 	speed: 300,
-	// 	slidesToShow: 5,
-	// 	slidesToScroll: 1,
-	// 	responsive: [
-	// 	{
-	// 		breakpoint: 1285,
-	// 		settings: {
-	// 			slidesToShow: 4,
-	// 			slidesToScroll: 1
-	// 		}
-	// 	},
-	// 	{
-	// 	breakpoint: 1200,
-	// 		settings: {
-	// 			slidesToShow: 3,
-	// 			slidesToScroll: 1
-	// 		}
-	// 	}
-	// 	]
-	// });
-
+	
 	//slick
 	$('.single-item').slick();
 });
