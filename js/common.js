@@ -23,9 +23,52 @@ head.ready(function() {
 		$('.js-basket-block').slideToggle();
 	});
 
-	$('.js-shirt').click(function(){
-		$('.js-shirt').removeClass('is-active');
+	var shirt = $('.js-shirt')
+	shirt.click(function(){
+		shirt.removeClass('is-active');
 		$(this).addClass('is-active');
+		$('.js-shirt-block').show();
+		var window_width = $(window).width(),
+			item = $('.js-shirt-block'),
+			shirt_prev_all = $(this).prevAll().length;
+		if (window_width > 1200) {
+			var row_counter = 5;
+		}
+		else {
+			var row_counter = 4;
+		};
+		var row = shirt_prev_all/row_counter;
+		function isInteger(num) {
+		  return (num ^ 0) === num;
+		}
+		if (isInteger(row)) {
+			if (row == 0) {
+				row = 0;
+			}
+			else {
+				row = row - 1;
+			};
+		}
+		else {
+			row = Math.floor(row);
+		};
+		row = row*row_counter;
+		$('.js-shirt-info').remove();
+		$(this).parent().find('.js-shirt :eq('+row+')').before('<div class="js-shirt-info"></div>');
+		item.appendTo('.js-shirt-info');
+		//slick
+		$('.single-item').unslick();
+		$('.single-item').slick();
+	});
+
+	$('.clothing__field').on('click', '.js-shirt-btn', function(){
+		$('.js-shirt-block').hide();
+		$('.js-shirt').removeClass('is-active');
+	});
+
+	$('.js-more').click(function() {
+	   var items = $('#load-shirts .js-shirt');
+	   items.appendTo($('.tab-cont.is-active').find('.clothing__field'));
 	});
 
 	//select
@@ -63,7 +106,7 @@ head.ready(function() {
 	//scroll
 	$(window).scroll(function(){
 		var js_scroll = $(window).scrollTop();
-		if ( js_scroll > 650 ) { 
+		if ( js_scroll > 65 ) { 
 			$(".js-top-nav").addClass('is-active'); 
 		}
 		else { 
@@ -73,24 +116,44 @@ head.ready(function() {
 
 	//tab
 	function tab() {
-			$(".js-tab").each(function(){
-				var tab_link = $(this).find("a");
-				var tab_item = $(this).find("li");
-				var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
-				// tab_cont.hide();
-				tab_item.first().addClass("is-active");
-				$(this).parents(".js-tab-group").find(".js-tab1").addClass("is-active");
-				tab_link.on("click", function() {
-					var index = $(this).attr("href");
-					tab_item.removeClass("is-active");
-					$(this).parent().addClass("is-active");
-					tab_cont.removeClass('is-active')
-					$(this).parents(".js-tab-group").find("."+index).addClass("is-active");
-					return false;
-				});
+		$(".js-tab").each(function(){
+			var tab_link = $(this).find("a");
+			var tab_item = $(this).find("li");
+			var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
+			// tab_cont.hide();
+			tab_item.first().addClass("is-active");
+			$(this).parents(".js-tab-group").find(".js-tab1").addClass("is-active");
+			tab_link.on("click", function() {
+				var index = $(this).attr("href");
+				tab_item.removeClass("is-active");
+				$(this).parent().addClass("is-active");
+				tab_cont.removeClass('is-active')
+				$(this).parents(".js-tab-group").find("."+index).addClass("is-active");
+				return false;
 			});
+		});
 	}
 	tab();
+
+	//tab2
+	function tab2() {
+        var el = $(".js-tab2");
+        var tab_link = el.find("a");
+        var tab_item = el.find("li");
+        var tab_cont = el.parents(".js-tab-group2").find(".js-tab-cont2");
+        tab_cont.hide();
+        tab_item.first().addClass("is-active");
+        el.parents(".js-tab-group2").find(".js-tab1").show();
+        $('body').on("click", ".js-tab2 a", function() {
+            var index = $(this).attr("href");
+            tab_item.removeClass("is-active");
+            $(this).parent().addClass("is-active");
+            tab_cont.hide();
+            $(this).parents(".js-tab-group2").find("."+index).show();
+            return false;
+        });
+	}
+	tab2();
 
 	// slick
 	$('.responsive').slick({
@@ -117,6 +180,4 @@ head.ready(function() {
 		]
 	});
 	
-	//slick
-	$('.single-item').slick();
 });
