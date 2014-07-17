@@ -23,10 +23,10 @@ head.ready(function() {
 		$('.js-basket-block').slideToggle();
 	});
 
-	// $('.js-shirt').click(function(){
-	// 	$(this).addClass('is-active')
-	// 	$('.js-shirt-block').slideToggle();
-	// });
+	$('.js-shirt').click(function(){
+		$('.js-shirt').removeClass('is-active');
+		$(this).addClass('is-active');
+	});
 
 	//select
     function selectList() {
