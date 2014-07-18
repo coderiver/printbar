@@ -95,7 +95,7 @@ body
 .header
 	color: $white
 	font-weight: 300
-	background: url('../img/bg-top.png') no-repeat 0 0
+	background: url('../img/bg-top.png') no-repeat 50% 0
 	background-size: cover 
 	&.header_hid
 		overflow: hidden
@@ -391,7 +391,7 @@ body
 	.informer__wrap
 		position: absolute
 		top: 305px
-		left: -223px
+		left: -227px
 		padding-left: 40px
 		width: 480px
 		height: 70px
@@ -582,6 +582,7 @@ body
 
 //tab
 .clothing__tab
+	position: relative
 	padding: 12px 0 0
 	.tab
 		font-size: 0
@@ -603,22 +604,24 @@ body
 		text-decoration: none  
 		display: block 
 		background: none
-.tab-cont
-	position: relative
-	padding: 0
-	visibility: hidden
-	height: 0
-	+box
-	+clr
-	&.is-active
-		padding: 70px 0 110px
-		visibility: visible
-		height: auto
 	.btn
 		position: absolute
 		left: 50%
 		bottom: -28px
 		margin-left: -120px
+.tab-cont
+	position: relative
+	padding: 0
+	height: 0
+	visibility: hidden
+	+opacity(0)
+	+box
+	+clr
+	&.is-active
+		padding: 70px 0 110px
+		height: auto
+		visibility: visible
+		+opacity(1)
 
 .tab-info
 	margin-bottom: 18px
@@ -636,6 +639,7 @@ body
 		visibility: visible
 		height: auto
 		font-size: 13px
+		+opacity(1)
 
 // slider
 .slider

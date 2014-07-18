@@ -71,6 +71,18 @@ head.ready(function() {
 	   items.appendTo($('.tab-cont.is-active').find('.clothing__field'));
 	});
 
+
+	var js_shirt_button = $(".js-shirt");
+	var wHeight = $(window).height();
+	var ph = (wHeight - 514) / 2;
+
+	js_shirt_button.click(function() {
+	    $('html, body').animate({
+	        scrollTop: ($(".js-shirt-block").offset().top - ph)
+	    }, 600);
+	});
+
+
 	//select
     function selectList() {
         var select = $(".js-select");

@@ -29,7 +29,7 @@ body { color: #2b2b2b; font-size: 13px; line-height: 1.4; font-weight: 400; font
 .container.container_rel { height: 0; position: relative; }
 .container.container_rel2 { position: relative; }
 
-.header { color: white; font-weight: 300; background: url("../img/bg-top.png") no-repeat 0 0; background-size: cover; }
+.header { color: white; font-weight: 300; background: url("../img/bg-top.png") no-repeat 50% 0; background-size: cover; }
 .header.header_hid { overflow: hidden; }
 .header .header__wrap { margin-bottom: 440px; background: #313131; background: rgba(49, 49, 49, 0.8); }
 .header .header__wrap, .header .header__bottom { padding: 20px 0; }
@@ -129,7 +129,7 @@ body { color: #2b2b2b; font-size: 13px; line-height: 1.4; font-weight: 400; font
 
 .informer { position: fixed; top: 0; left: 0; width: 100%; z-index: 400; }
 .informer .container { position: relative; }
-.informer .informer__wrap { position: absolute; top: 305px; left: -223px; padding-left: 40px; width: 480px; height: 70px; overflow: hidden; -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
+.informer .informer__wrap { position: absolute; top: 305px; left: -227px; padding-left: 40px; width: 480px; height: 70px; overflow: hidden; -ms-transform: rotate(-90deg); -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
 .informer .informer__wrap:before { position: absolute; content: ""; top: -33px; left: 0; height: 30px; width: 100%; -moz-box-shadow: 1px 0px 30px black; -webkit-box-shadow: 1px 0px 30px black; box-shadow: 1px 0px 30px black; -moz-border-radius: 100%; -webkit-border-radius: 100%; border-radius: 100%; }
 .informer .ico { margin-right: 10px; }
 .informer .callback, .informer .consultant { padding: 0 20px 0 15px; display: inline-block; height: 55px; line-height: 54px; font-size: 16px; font-weight: 700; vertical-align: top; -moz-box-shadow: 0 0 10px #2b2b2b; -webkit-box-shadow: 0 0 10px #2b2b2b; box-shadow: 0 0 10px #2b2b2b; }
@@ -171,22 +171,22 @@ body { color: #2b2b2b; font-size: 13px; line-height: 1.4; font-weight: 400; font
 .shirt .shirt__price { margin-top: 20px; display: inline-block; }
 @media (max-width: 1200px) { .shirt { width: 25%; } }
 
-.clothing__tab { padding: 12px 0 0; }
+.clothing__tab { position: relative; padding: 12px 0 0; }
 .clothing__tab .tab { font-size: 0; text-align: center; overflow: hidden; }
 .clothing__tab .tab_mod { padding-bottom: 25px; }
 .clothing__tab .tab__item { display: inline-block; }
 .clothing__tab .tab__item.is-active .tab__link { color: white; background: #ee254a; }
 .clothing__tab .tab__link { padding: 10px 20px; color: #2b2b2b; font-size: 16px; font-weight: 300; text-decoration: none; display: block; background: none; }
+.clothing__tab .btn { position: absolute; left: 50%; bottom: -28px; margin-left: -120px; }
 
-.tab-cont { position: relative; padding: 0; visibility: hidden; height: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; *zoom: 1; }
+.tab-cont { position: relative; padding: 0; height: 0; visibility: hidden; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; *zoom: 1; }
 .tab-cont:after { content: " "; display: table; clear: both; }
-.tab-cont.is-active { padding: 70px 0 110px; visibility: visible; height: auto; }
-.tab-cont .btn { position: absolute; left: 50%; bottom: -28px; margin-left: -120px; }
+.tab-cont.is-active { padding: 70px 0 110px; height: auto; visibility: visible; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
 
 .tab-info { margin-bottom: 18px; }
 .tab-info .tab__item { display: inline-block; }
 .tab-info .tab__item a { margin-right: 35px; color: white; border-bottom: 1px dotted white; text-decoration: none; font-size: 17px; display: inline-block; }
-.tab-info .tab-cont { padding: 15px 0 0 0; visibility: visible; height: auto; font-size: 13px; }
+.tab-info .tab-cont { padding: 15px 0 0 0; visibility: visible; height: auto; font-size: 13px; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
 
 .slider { position: relative; margin: 0 auto; }
 .slider .slick-slide { height: 222px; font-size: 0; }
