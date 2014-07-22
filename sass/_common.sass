@@ -77,6 +77,8 @@ body
 	margin: 0 auto -115px
 	&.out_catalog
 		overflow: hidden
+	&.out_black
+		background: url("../img/bg-grey.png") repeat
 
 //container
 .container
@@ -279,6 +281,15 @@ body
 		+s(bgn)
 	&.ico_collection
 		+s(ico-collect)
+	&.ico_doll
+		+s(ico-dol)
+	&.ico_log
+		+s(ico-login-btn)
+	&.ico_like
+		+s(like-pic)
+	&.ico_mwssage
+		vertical-align: middle
+		+s(new_message)
   
 //logo
 .logo
@@ -333,6 +344,11 @@ body
 			text-decoration: underline
 		.ico
 			margin-left: 10px
+	&.btn_grey
+		background: #464646
+	&.btn_white
+		color: $black
+		background: $white
 		
 //title
 .title
@@ -342,6 +358,8 @@ body
 		font-size: 32px
 	&.title-2
 		font-size: 24px
+	&.title-3
+		font-size: 18px
 	&.title_line
 		position: relative
 		line-height: 1
@@ -449,6 +467,8 @@ body
 //clothing
 .clothing
 	padding: 42px 0 0
+	&.clothing_white
+		background: $white
 	.tab-cont_mod
 		&.is-active
 			padding: 0
@@ -830,6 +850,15 @@ body
 	.btn
 		margin-left: 0
 
+.tab-cont_cabinet
+	&.is-active
+		padding: 0
+	.basket
+		position: relative
+		top: auto
+		left: auto
+		display: block
+
 //checkbox
 .checkbox
 	position: relative
@@ -889,7 +918,7 @@ body
 		left: -10px
 		height: 100%
 		width: 10px
-		+box-shadow(1px 0px 22px 1px #000000)
+		+box-shadow(1px 0px 22px 0 #000000)
 		+border-radius(100%)
 	&:after
 		position: absolute
@@ -898,8 +927,13 @@ body
 		right: -10px
 		height: 100%
 		width: 10px
-		+box-shadow(1px 0px 22px 1px #000000)
+		+box-shadow(1px 0px 22px 0 #000000)
 		+border-radius(100%)
+	&.form_question
+		margin-top: 30px
+		padding: 10px 0 80px
+		&:after
+			display: none
 	.form__wrap
 		padding: 30px 22px 22px 25px
 		background: $grey
@@ -935,6 +969,9 @@ body
 	margin-left: 80px
 	padding: 20px 0 0
 	width: 49%
+	&.product_mod
+		margin-left: 50px
+		width: 54.2%
 	a
 		color: $white
 		text-decoration: none
@@ -971,6 +1008,28 @@ body
 		display: inline-block
 		&:first-child
 			margin-left: 0
+	.product__top
+		font-size: 24px
+		text-transform: uppercase
+		font-weight: 700
+		.product__price
+			strong
+				font-size: 24px
+		.btn
+			height: 40px
+			width: 160px
+			font-size: 13px
+			font-weight: 700
+			line-height: 40px
+			.ico
+				margin-right: 5px
+				margin-top: -2px
+				vertical-align: middle 
+	.product__price
+		strong
+			font-size: 18px
+	.product__order
+		margin-right: 64px
 
 //price
 .price
@@ -1114,6 +1173,98 @@ body
 		border-color: $black
 		border-width: 2px
 
+//accordion
+.accordian
+	width: 100%
+	.section-title
+		background: none
+		display: block
+		margin: 0
+	.section-title
+		cursor: pointer
+		outline: none
+	.product__top
+		padding: 27px 22px
+		border-bottom: 1px dotted #4e4e4e 
+		+clr
+		.btn
+			float: right
+		&:focus
+			outline: none
+	.collapsing-section
+		padding: 0 20px
+		border-bottom: 1px dotted #4e4e4e 
+	.open
+		.product__top
+			border-top: 1px dotted #4e4e4e
+			border-bottom: 1px dotted #4e4e4e 
+	.product__item
+		border-top: 1px dotted #4e4e4e
+		&:first-child
+			border-top: none
+	.open, .open + .collapsing-section
+		background: url('../img/bg-grey-light.png') repeat
+.js .collapsing-section
+	display: none
+
+//question
+.question
+	padding: 0 !important
+	background: $white !important
+	.question__top
+		padding: 22px 22px 18px
+		color: $black
+		background: #f2f2f2
+		+box
+	.question__wrap
+		padding: 0 38px 0 24px
+
+//comments
+.comments
+	color: $grey
+	.comments__item
+		position: relative
+		padding: 20px 0
+		border-top: 1px dotted #acacac
+		&:first-child
+			border-top: none
+	.comments__time
+		position: absolute
+		top: 20px
+		right: 0
+		font-weight: bold
+	.comments__user
+		font-weight: bold
+		&:first-letter
+			text-transform: uppercase
+	.comments__text
+		padding-top: 12px
+.message
+	background: #f2f2f2
+	.message__row
+		font-size: 0
+		+clr
+		input
+			float: left
+			padding-left: 23px
+			width: 85%
+			height: 59px
+			color: #727272
+			font-size: 17px
+			border-top: 2px solid #a3a3a3
+			background: #f2f2f2
+			display: inline-block
+			+placeholder-color(#727272)
+			+box
+			&:focus
+				+placeholder
+					font-size: 0
+		.btn
+			float: right
+			width: 15%
+			height: 59px
+			line-height: 59px
+
 //footer
 .footer, .push
 	height: 115px
@@ -1151,3 +1302,19 @@ body
 		text-align: center
 		font-size: 12px
 		text-transform: uppercase
+
+//.scroll-pane
+.scroll-pane
+	margin: 22px 0 16px
+	max-height: 386px
+	overflow: auto
+	.jspVerticalBar
+		right: 16px
+		background: none
+	.jspTrack
+		width: 2px 
+		background: #a3a3a3
+	.jspDrag
+		width: 4px 
+		margin-left: -1px
+		background: #737373
