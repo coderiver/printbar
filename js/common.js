@@ -23,6 +23,14 @@ head.ready(function() {
 		$('.js-basket-block').slideToggle();
 	});
 
+	// $(".color__block").each(function(){
+
+	// });
+	$(".color__block").click(function(){
+		$(".color__block").removeClass("is-active");
+		$(this).addClass("is-active");
+	});
+
 	var shirt = $('.js-shirt')
 	shirt.click(function(){
 		shirt.removeClass('is-active');
@@ -102,8 +110,8 @@ head.ready(function() {
         });
         $("body").on("click", ".js-select-list li", function(event){
             var id = $(this).attr("data-id");
-            var text = $(this).text();
-            $(this).parents(".js-select").find(".js-select-text").text(text);
+            var text = $(this).html();
+            $(this).parents(".js-select").find(".js-select-text").html(text);
             $(this).parents(".js-select").find(".js-select-input").val(id);
             $(this).parent().hide();
             $(this).parents(".js-select").removeClass("is-active");

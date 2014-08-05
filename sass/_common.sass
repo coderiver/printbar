@@ -86,6 +86,7 @@ body
 	margin: 0 auto
 	min-width: 1000px
 	max-width: 1200px
+	+clr
 	&.container_pt
 		padding-top: 40px
 	&.container_rel
@@ -293,6 +294,18 @@ body
 	&.ico_mwssage
 		vertical-align: middle
 		+s(new_message)
+	&.ico_info
+		+s(ico_info)
+	&.ico_man
+		+s(radio_man)
+	&.ico_woman
+		+s(radio_woman)
+	&.ico_pic
+		+s(ico-pic)
+	&.ico_font
+		+s(ico_font)
+	&.ico_btn
+		+s(ico_btn)
   
 //logo
 .logo
@@ -1242,6 +1255,8 @@ body
 			text-transform: uppercase
 	.comments__text
 		padding-top: 12px
+
+//message
 .message
 	background: #f2f2f2
 	.message__row
@@ -1267,6 +1282,413 @@ body
 			width: 15%
 			height: 59px
 			line-height: 59px
+
+//step
+.step
+	padding-bottom: 75px
+	.step__top
+		padding: 45px 0 25px
+		background: $white
+	.step__list
+		margin-top: 12px
+		font-size: 0
+		text-align: center
+		li
+			padding: 12px 12px 10px 20px
+			color: $black
+			font-size: 16px
+			line-height: 1
+			font-weight: 300
+			cursor: default
+			display: inline-block
+			+transition(all 0.2s linear)
+			&.is-active
+				color: $white
+				background: $red
+	.step__field
+		+clr
+	.step__info
+		padding: 28px 0
+		color: $white
+	.step__title, .editor__title
+		font-weight: 700
+		font-size: 24px
+		text-transform: uppercase
+	.step__text, .editor__text
+		.ico
+			margin-left: 5px
+			vertical-align: text-top
+	.stip__bottom
+		padding-top: 40px
+		text-align: center
+		.btn
+			padding: 0 15px 0 17px
+			height: 49px
+			width: auto
+			line-height: 49px
+			font-size: 24px
+			font-weight: 700
+			.ico
+				margin-left: 15px
+				vertical-align: middle
+
+//panel
+.panel
+	position: relative
+	padding: 28px 22px 20px 27px
+	width: 68%
+	height: 550px
+	overflow: hidden
+	border: 1px dashed #959595
+	+box
+	.panel__block
+		position: absolute
+		top: 28px
+		right: 22px
+		bottom: 20px
+		left: 27px
+		overflow: hidden
+	.panel__bg
+		display: block
+	.panel__shirt
+		position: absolute
+		top: 27px
+		left: 155px
+		z-index: 3
+	.panel__shirtshadow
+		position: absolute
+		top: -25px
+		left: 97px
+		z-index: 2
+		+s(shirt-shadow)
+	.panel__blur
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+		background-color: rgba(#2c2c2c,.7)
+	.panel__btn
+		position: absolute
+		z-index: 10
+		&:hover
+			+opacity(.9)
+	.panel__btn_top-left
+		top: 50px
+		left: 45px
+		+s(panel__btn_top-left)
+	.panel__btn_top-right
+		top: 50px
+		right: 42px
+		+s(panel__btn_top-right)
+	.panel__btn_rotate-left
+		top: 50%
+		left: 45px
+		margin-top: -9px
+		+s(panel__btn_rotate-left)
+	.panel__btn_rotate-right
+		top: 50%
+		right: 42px
+		margin-top: -9px
+		+s(panel__btn_rotate-right)
+	.panel__btn_bottom-left
+		left: 45px
+		bottom: 37px
+		+s(panel__btn_bottom-left)
+	.panel__btn_bottom-right
+		bottom: 37px
+		right: 42px
+		+s(panel__btn_bottom-right)
+	.panel__text	
+		position: absolute
+		top: 126px
+		left: 290px
+		padding: 10px 12px 45px
+		max-width: 200px
+		max-height: 365px
+		font-size: 32px
+		color: $white
+		z-index: 4
+		overflow: hidden
+		font-family: "Times New Roman", Arial, sans-serif
+		border: 1px dashed #959595
+		background: rgba(#000, 0.5)
+		+box
+
+//editor
+.editor
+	float: right
+	width: 312px
+	color: $white
+	&.editor_mod
+		.editor__row
+			padding: 40px 0
+			padding-left: 21px
+			&:first-child
+				padding-top: 15px
+	.editor__row
+		padding: 15px 0
+		font-size: 0
+		border-top: 1px dashed #454545
+		+box
+		&:first-child
+			padding-top: 4px
+			border: none
+	.editor__row_size
+		.editor__item
+			margin-bottom: 7px
+			&:first-child
+				margin-bottom: 15px
+	.editor__title
+		padding-bottom: 15px
+	.editor__col
+		height: 32px
+		line-height: 32px
+		vertical-align: top
+		display: inline-block
+	.editor__col_30
+		width: 30%
+	.editor__col_132
+		width: 132px
+	.editor__col_125
+		width: 125px
+	.editor__col_70
+		width: 70%
+	.editor__col_price
+		font-size: 17px
+		color: $white
+		strong
+			font-size: 24px
+	.editor__col_size
+		font-size: 16px
+		color: $white
+	.editor__text
+		font-size: 13px
+		padding-bottom: 8px
+		&.editor__text_bott
+			font-size: 15px
+	.editor__item
+		font-size: 0
+		&.editor__item_radio
+			padding-top: 20px
+		&.editor__item_formal
+			.btn
+				vertical-align: top
+	.step__item_mod
+		margin: 65px 0 19px
+		.editor__col
+			height: 57px
+			line-height: 57px
+		.editor__col_125
+			margin: 0 20px
+	.editor__select, .dye__select
+		font-size: 14px
+		font-weight: 300
+		.select__text
+			padding: 0 38px 0 8px
+			height: 32px
+			line-height: 28px
+			color: $white
+			border: 2px solid $red
+			background: $grey1
+			+box
+			&:before
+				position: absolute
+				content: ''
+				top: 0
+				right: 0
+				height: 32px
+				width: 29px
+				background: $red
+			&:after
+				right: 9px
+				margin-top: -3px
+				+arr(12, 7, $white, b)
+		.select__list
+			border: 2px solid $red
+			border-top: none
+			background: $grey1
+	.editor__radio
+		margin: 0
+		cursor: pointer
+		&:first-child
+			margin: 0 55px 0 22px
+		span
+			color: $white
+			&:before
+				+border-radius(50%)
+			&:after
+				background: $red
+			.ico
+				margin-right: 5px
+				vertical-align: text-top
+		input
+			+box
+			&:checked
+				+ span
+					&:before
+						border-color: $white
+	.editor__input
+		.input__row
+			position: relative
+			height: 38px
+		.input__btn
+			position: absolute
+			top: 0
+			left: 0
+			height: 38px
+			width: 38px
+			background: $red
+			.ico
+				vertical-align: middle
+		input
+			padding-left: 55px
+			line-height: 1.4
+			color: $black
+			background: $white
+			border: none
+			+placeholder-color($black)
+	.editor__checkbox
+		margin-top: 4px
+		span
+			color: $white
+			&:before
+				border-width: 2px
+			&:after
+				+s(chec-chec)
+	// .editor__dye, .editor__size
+	// 	display: inline-block
+	.editor__size
+		float: left
+		width: 80px
+	.editor__img
+		position: relative
+		float: right
+		margin-right: 25px
+		display: inline-block
+		img
+			position: relative
+			z-index: 1
+		.editor__shirtshadow
+			position: absolute
+			top: -54px
+			right: -60px
+			+s(shirt-shadow)
+	.editor__formalization
+		padding-left: 22px
+		margin-top: 10px
+		width: 105px
+		line-height: 1.4
+		font-size: 13px
+		color: $red
+		display: inline-block
+		span
+			color: $white
+	.editor__soc
+		margin-top: 15px
+		li
+			margin-right: 20px
+			display: inline-block
+		.ico_f
+			+s(fb) 
+		.ico_vk
+			+s(vk-2)
+		.ico_tw
+			+s(tw-2) 
+	.btn_276
+		padding: 0 60px
+		height: 57px
+		width: auto
+		line-height: 57px
+		span
+			width: 160px
+			line-height: 1.4
+			font-size: 16px
+			vertical-align: middle
+			display: inline-block
+
+//dye
+.dye
+	float: right
+	text-align: right
+	width: 112px
+	.dye__text
+		padding-right: 10px
+		height: 32px
+		line-height: 32px
+		vertical-align: top
+		display: inline-block
+	.dye__select
+		display: inline-block
+		width: 60px
+	.select 
+		text-align: left
+		.select__list li
+			padding: 5px 15px
+		.select__list
+			background: $light-grey
+		.select__text
+			padding: 0 !important
+		.select__color
+			width: 28px
+			height: 28px
+			display: inline-block
+			&.select__color_white
+				background: $white
+			&.select__color_black
+				background: $black
+			&.select__color_red
+				background: $red
+
+//color
+.color
+	.color__field
+		margin-bottom: 8px
+		font-size: 0
+	.color__block
+		margin-left: 8px
+		height: 32px
+		width: 32px
+		cursor: pointer
+		display: inline-block
+		+box
+		&:first-child
+			margin-left: 0
+		&.is-active
+			border: 2px solid $red
+		&.color__block_black
+			background: #101010
+		&.color__block_dark-gray
+			background: #414141
+		&.color__block_grey
+			background: #7e7e7e
+		&.color__block_light-gray
+			background: #dddddd
+		&.color__block_red
+			background: #ff0000
+		&.color__block_orange
+			background: #ff7800
+		&.color__block_yellow
+			background: #ffc000
+		&.color__block_yellow-green
+			background: #ccff00
+		&.color__block_green
+			background: #00ff48
+		&.color__block_light-green
+			background: #00ffc6
+		&.color__block_light-blue
+			background: #00baff
+		&.color__block_blue
+			background: #0054ff
+		&.color__block_purple
+			background: #7e00ff
+		&.color__block_lilac
+			background: #ff00fc
+		&.color__block_pink
+			background: #ff005a
+		&.color__block_brown-pink
+			background: #823e56
 
 //footer
 .footer, .push
