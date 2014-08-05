@@ -469,8 +469,9 @@ body { color: #2b2b2b; font-size: 13px; line-height: 1.4; font-weight: 400; font
 .editor .editor__img { position: relative; float: right; margin-right: 25px; display: inline-block; }
 .editor .editor__img img { position: relative; z-index: 1; }
 .editor .editor__img .editor__shirtshadow { position: absolute; top: -54px; right: -60px; background: url('../img/icons-s7adc38b7fb.png') 0 -2623px no-repeat; width: 565px; height: 571px; }
-.editor .editor__formalization { padding-left: 22px; margin-top: 10px; width: 105px; line-height: 1.4; font-size: 13px; color: #ee254a; display: inline-block; }
-.editor .editor__formalization span { color: white; }
+.editor .editor__formalization { padding-left: 22px; margin-top: 10px; width: 105px; line-height: 1.4; font-size: 13px; color: white; display: inline-block; }
+.editor .editor__formalization a { color: #ee254a; text-decoration: none; }
+.editor .editor__formalization a:hover { text-decoration: underline; }
 .editor .editor__soc { margin-top: 15px; }
 .editor .editor__soc li { margin-right: 20px; display: inline-block; }
 .editor .editor__soc .ico_f { background: url('../img/icons-s7adc38b7fb.png') 0 -1332px no-repeat; width: 13px; height: 28px; }
