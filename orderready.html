@@ -5,14 +5,13 @@
 	<title>Template</title>
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<link rel="stylesheet" media="screen" href="css/jquery.jscrollpane.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 <!-- BEGIN  out-->
-<div class="out out_black">
+<div class="out">
 	<!-- BEGIN header -->
 	<div class="header"><!-- BEGIN header__top -->
 		<div class="header__top topic js-top-nav">
@@ -206,82 +205,82 @@
 		<!-- END header__top -->
 	</div>
 	<!-- END header -->
-	<!-- BEGIN step -->
-	<div class="step">
-		<div class="step__top">
-			<!-- BEGIN container -->
-			<div class="container">
-				<h3 class="title title-1 title_line"><span>Создание футболки с индивидуальным дизайном</span></h3>
-				<!-- BEGIN step__list -->
-				<ul class="step__list">
-					<li>Шаг 1. Создание дизайна</li>
-					<li class="is-active">Шаг 2. Проверка результата</li>
-				</ul>
-				<!-- END step__list -->
-			</div>
-			<!-- END container -->
-		</div>
 		<!-- BEGIN container -->
-		<div class="container">
-			<div class="step__editor editor editor_mod l">
-				<div class="l-col1">
-					<div class="editor__img">
-						<img src="img/t-shirt-panel.png" alt="img">
-						<div class="editor__shirtshadow"></div>
+	<div class="container container_pt">
+		<h3 class="title title-1 title_line"><span>Ваш заказ оформлен!</span></h3>
+		<div class="article">Заказ № 345934857</div>
+		<!-- BEGIN content -->
+		<div class="content">
+			<!-- BEGIN booking -->
+			<div class="booking">
+				<div class="booking__left">
+					<div class="title title-2">Информация о заказчике</div>
+					<div class="booking__customer customer">
+						<div class="customer__row">
+							<div class="customer__info">ФИО:</div>
+							<div class="customer__data">Никитин Афанасий Петрович</div>
+						</div>
+						<div class="customer__row">
+							<div class="customer__info">e-mail:</div>
+							<a href="#" class="customer__data">nikitin.afanasij@gmail.com</a>
+						</div>
+						<div class="customer__row">
+							<div class="customer__info">Телефон:</div>
+							<div class="customer__data">+372 666 77 887</div>
+						</div>
+						<div class="customer__row">
+							<div class="customer__info">Адрес:</div>
+							<div class="customer__data">
+								<p>ул. Пушкина 276/98 г.</p>
+								<p>Владивосток</p>
+								<p>Россия 9823</p>
+							</div>
+						</div>
+					</div>
+					<div class="booking__comments">
+						<div class="booking__title">Комментарии:</div>
+						<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
 					</div>
 				</div>
-				<div class="l-col2">
-					<div class="editor__row">
-						<h3 class="editor__title">Ваша футболка почти готова!</h3>
-						<div class="editor__text">Выберите нужные параметры, количество и зарегистрируйтесь, <br>чтобы ваш заказ не потерялся <i class="ico ico_info"></i></div>
-						<div class="editor__item step__item_mod">
-							<div class="editor__col editor__col_132">
-								<div class="select js-select">
-								<span class="select__text js-select-text">M (47)</span>
-								<input type="hidden" class="js-select-input" value="0">
-								<ul class="select__list js-select-list">
-									<li data-id="0">var0</li>
-									<li data-id="1">var1</li>
-									<li data-id="2">var2</li>
-									<li data-id="3">var3</li>
-								</ul>
-							</div>
-							</div>
-							<div class="editor__col editor__col_125">
-								<div class="select js-select">
-								<span class="select__text js-select-text">1 шт</span>
-								<input type="hidden" class="js-select-input" value="0">
-								<ul class="select__list js-select-list">
-									<li data-id="0">var0</li>
-									<li data-id="1">var1</li>
-									<li data-id="2">var2</li>
-									<li data-id="3">var3</li>
-								</ul>
-							</div>
-							</div>
-							<div class="editor__col editor__col_price"><strong>1500</strong> руб.</div>
-						</div>
-						<div class="editor__item editor__item_formal">
-							<button class="btn btn_red btn_276"><span>Зарегистрироваться и оформить заказ</span></button>
-							<div class="editor__formalization formalization">или <a href="#">оформите заказ как гость</a></div>
-						</div>
-					</div>
-					<div class="editor__row">
-						<div class="editor__text editor__text_bott">Поделитесь своим дизайном с друзьями</div>
-						<!-- BEGIN soc -->
-						<ul class="editor__soc soc">
-							<li class="soc__item"><a class="ico ico_f" href="#"></a></li>
-							<li class="soc__item"><a class="ico ico_vk" href="#"></a></li>
-							<li class="soc__item"><a class="ico ico_tw" href="#"></a></li>
-						</ul>
-						<!-- END soc -->
+				<div class="booking__right">
+					<div class="title title-2">Заказанные товары</div>
+					<table class="booking__table">
+						<tr>
+							<th>Название</th>
+							<th>Количество</th>
+							<th>Стоимость</th>
+							<th>Сумма</th>
+						</tr>
+						<tr>
+							<td>Футболка</td>
+							<td>1</td>
+							<td>1100 руб.</td>
+							<td>1100 руб.</td>
+						</tr>
+						<tr>
+							<td>Футболка</td>
+							<td>1</td>
+							<td>1100 руб.</td>
+							<td>1100 руб.</td>
+						</tr>
+						<tr>
+							<td>Свитшот</td>
+							<td>1</td>
+							<td>1100 руб.</td>
+							<td>1100 руб.</td>
+						</tr>
+					</table>
+					<div class="booking__amount amount">
+						<div class="amount__left">Сумма всего заказа:</div>
+						<div class="amount__right">3300 руб.</div>
 					</div>
 				</div>
 			</div>
+			<!-- END booking -->
 		</div>
-		<!-- END container -->
+		<!-- END content -->
 	</div>
-	<!-- END step -->
+	<!-- END container -->
 </div>
 <!-- END out-->
 <!-- BEGIN push -->
@@ -326,6 +325,7 @@
 	<!-- END footer__bottom -->
 </div>
 <!-- END footer -->
+
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
 </html>

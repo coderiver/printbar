@@ -6,6 +6,7 @@
 	<meta name="viewport" content="initial-scale=1"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<link rel="stylesheet" media="screen" href="css/jquery.jscrollpane.css" >
+	<link rel="stylesheet" media="screen" type="text/css" href="css/colorpicker.css" />
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 </head>
@@ -254,7 +255,7 @@
 							<!-- BEGIN checkbox -->
 							<label class="editor__radio checkbox">
 							    <input type="radio" name="raz">
-							    <span><i class="ico ico_woman"></i>Мужская</span>
+							    <span><i class="ico ico_woman"></i>Женская</span>
 							</label>
 							<!-- END checkbox -->
 						</div>
@@ -264,7 +265,7 @@
 						<div class="editor__item">
 							<div class="editor__input input">
 								<div class="input__row">
-									<button class="input__btn"><i class="ico ico_pic"></i></button>
+									<button class="input__btn newimg"><i class="ico ico_pic"></i></button>
 									<input type="text" placeholder="Изменить изображение на изделии">
 								</div>
 							</div>
@@ -274,7 +275,7 @@
 						<div class="editor__text">Цвет манжетов</div>
 						<div class="editor__item color">
 							<div class="color__field">
-								<div class="color__block color__block_black is-active"></div>
+								<div class="color__block color__block_black"></div>
 								<div class="color__block color__block_dark-gray"></div>
 								<div class="color__block color__block_grey"></div>
 								<div class="color__block color__block_light-gray"></div>
@@ -309,21 +310,22 @@
 							<div class="editor__input input">
 								<div class="input__row">
 									<button class="input__btn"><i class="ico ico_font"></i></button>
-									<input type="text" placeholder="Добавить надпись на изделие">
+									<input type="text" class="textblock-text" placeholder="Добавить надпись на изделие">
 								</div>
 							</div>
 						</div>
 						<div class="editor__item">
 							<div class="editor__col editor__col_size editor__col_30">Шрифт</div>
 							<div class="editor__col	editor__col_70">
-								<div class="editor__select select js-select">
-									<span class="select__text js-select-text">Times New Roman</span>
+								<div class="editor__select select js-select text-family">
+									<span class="select__text js-select-text">serif</span>
 									<input type="hidden" class="js-select-input" value="0">
 									<ul class="select__list js-select-list">
-										<li data-id="0">var0</li>
-										<li data-id="1">var1</li>
-										<li data-id="2">var2</li>
-										<li data-id="3">var3</li>
+										<li data-id="0">serif</li>
+										<li data-id="1">sans-serif</li>
+										<li data-id="2">cursive</li>
+										<li data-id="3">fantasy</li>
+										<li data-id="4">monospace</li>
 									</ul>
 								</div>
 							</div>
@@ -332,59 +334,77 @@
 							<div class="editor__col editor__col_size editor__col_30">Размер</div>
 							<div class="editor__col editor__col_size editor__col_70">
 								<div class="editor__size">
-									<div class="editor__select select js-select">
-										<span class="select__text js-select-text">32</span>
-										<input type="hidden" class="js-select-input" value="0">
+									<div class="editor__select select js-select text-size">
+										<span class="select__text js-select-text">24</span>
+										<input type="hidden" class="js-select-input" value="2">
 										<ul class="select__list js-select-list">
-											<li data-id="0">var0</li>
-											<li data-id="1">var1</li>
-											<li data-id="2">var2</li>
-											<li data-id="3">var3</li>
+											<li data-id="0">16</li>
+											<li data-id="1">20</li>
+											<li data-id="2">24</li>
+											<li data-id="3">32</li>
+											<li data-id="4">46</li>
 										</ul>
 									</div>
 								</div>
 								<div class="editor__dye dye">
 									<div class="dye__text">Цвет</div>
 									<div class="dye__select select js-select">
-										<span class="select__text js-select-text"><div class="select__color select__color_white"></div></span>
+										<span class="select__text js-select-text"><div class="select__color" style="background: rgb(255, 255, 255);"></div></span>
 										<input type="hidden" class="js-select-input" value="0">
-										<ul class="select__list js-select-list">
-											<li data-id="0">
-												<div class="select__color select__color_white"></div>
-											</li>
-											<li data-id="1">
-												<div class="select__color select__color_black"></div>
-											</li>
-											<li data-id="2">
-												<div class="select__color select__color_red"></div>
-											</li>
-										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					<div class="editor__row editor__row_bot">
+						<div class="stip__bottom"><button class="btn btn_red">Продолжить<i class="ico ico_btn"></i></button></div>
+					</div>
 				</div>
 				<!-- END editor -->
 				<!-- BEGIN panel -->
-				<div class="step__panel panel">
-					<div class="panel__block">
-						<img class="panel__bg" src="img/bg-panel.png" alt="img">
+				<div class="step__panel">
+					<div class="panel">
+						<div class="panel__block">
+							<img class="panel__bg" src="img/bg-panel.png" alt="img" style="left: -85px; top: 0px; ">
+							<img class="panel__shirt" src="img/t-shirt-shadow.png" alt="img">
+						</div>
+						<!--
+						<div class="panel__shirtshadow"></div>
+						<div class="panel__blur"></div>
+						-->
+						<div class="panel__text__block" style="width: 200px; height: 100px; top: 125px; left: 250px; display: none;">
+							<div class="panel__text" style="width: 200px; height: 100px;"></div>
+							<button class="panel__btn panel__btn_bottom-right"></button>
+							<button class="panel__btn panel__btn_rotate-right"></button>
+						</div>
+						<!--
+						<button class="panel__btn panel__btn_top-left"></button>
+						<button class="panel__btn panel__btn_top-right"></button>
+						<button class="panel__btn panel__btn_rotate-left"></button>
+						<button class="panel__btn panel__btn_rotate-right"></button>
+						<button class="panel__btn panel__btn_bottom-left"></button>
+						-->
 					</div>
-					<img class="panel__shirt" src="img/t-shirt-panel.png" alt="img">
-					<div class="panel__shirtshadow"></div>
-					<div class="panel__blur"></div>
-					<div class="panel__text" contenteditable="true">Hello World!</div>
-					<button class="panel__btn panel__btn_top-left"></button>
-					<button class="panel__btn panel__btn_top-right"></button>
-					<button class="panel__btn panel__btn_rotate-left"></button>
-					<button class="panel__btn panel__btn_rotate-right"></button>
-					<button class="panel__btn panel__btn_bottom-left"></button>
-					<button class="panel__btn panel__btn_bottom-right"></button>
+					<div class="step__regulator regulator">
+						<div class="regulator__col">
+							<div class="regulator__text">Поворот фона</div>
+							<div class="regulator__range">
+								<div class="regulator__scale regulator__scale_rotate"><img src="img/regulator-rotate.png" alt="img"></div>
+								<input class="regulator__bg__rotate panel__bg__rotate" type="range" min="-180" max="180" step="1" value="0">
+							</div>
+						</div>
+						<div class="regulator__col">
+							<div class="regulator__text">Размер фона</div>
+							<div class="regulator__range">
+								<div class="regulator__scale regulator__scale_resize"><img src="img/regulator-resize.png" alt="img"></div>
+								<input class="regulator__bg__resize panel__bg__resize" type="range" min="0" max="200" step="1" value="100">
+							</div>
+							<input type="file" id="fileselect" name="fileselect[]" accept="image/jpeg" class="" style="display: none;">
+						</div>
+					</div>
 				</div>
 				<!-- END panel -->
 			</div>
-			<div class="stip__bottom"><button class="btn btn_red">Продолжить<i class="ico ico_btn"></i></button></div>
 		</div>
 		<!-- END container -->
 	</div>

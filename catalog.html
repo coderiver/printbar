@@ -9,7 +9,6 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
 <!-- BEGIN  out-->
 <div class="out out_catalog">
 	<!-- BEGIN informer -->
@@ -492,54 +491,138 @@
 		<!-- BEGIN container -->
 		<div class="container">
 			<button class="btn btn_close js-shirt-btn"></button>
-			<!-- BEGIN slider slick -->
-			<div class="clothing__slider single-item">
-				<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
-				<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
+			<div class="clothing__left">
+				<!-- BEGIN slider slick -->
+				<div class="clothing__slider single-item">
+					<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
+					<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
+					<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
+					<div><a href="#"><img src="img/img7.png" alt="img"></a></div>
+				</div>
+			  	<!-- END slider slick -->
+			  	<div class="clothing__buttons">
+			  		<button class="clothing__btn">футболка</button>
+			  		<button class="clothing__btn">круги</button>
+			  		<button class="clothing__btn">разноцветная</button>
+			  		<button class="clothing__btn is-active">квадраты</button>
+			  		<button class="clothing__btn">прикладная геометрия</button>
+			  		<button class="clothing__btn">верхняя одежда</button>
+			  		<button class="clothing__btn">нижняя одежда</button>
+			  	</div>
 			</div>
-		  	<!-- END slider slick -->
 		  	<!-- BEGIN clothing__info -->
 		  	<div class="clothing__info">
-		  		<h3 class="title title-1">Colored circles</h3>
-		  		<div class="clothing__price">1500 руб.</div>
-		  		<div class="clothing__row">
-		  			<div class="tab-info js-tab-group2">
-						<!-- tab list -->
-						<ul class="tab js-tab2">
-							<li class="tab__item">
-								<a href="js-tab1" class="tab__link">Информация о товаре</a>
-							</li>
-							<li class="tab__item">
-								<a href="js-tab2" class="tab__link">Доставка</a>
-							</li>
-						</ul>
-						<!-- END tab list -->
-						<!-- tab content -->
-						<div class="tab-cont js-tab-cont2 js-tab1">
-							<p>Для изготовления футболки используется только высококачественный трикотаж и экологически чистые красители на водной основе.</p>
-							<p>Футболка выполнена без боковых швов, не садится после стирки. </p>
-						</div>
-						<div class="tab-cont js-tab-cont2 js-tab2">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolor temporibus similique nisi eius pariatur quaerat velit, magni error, ipsum doloribus beatae, ducimus nostrum aliquid explicabo ea fugiat recusandae itaque.recusandae itaque.</p> 
-						</div>
-						<!-- END tab content -->
-					</div>
+		  		<div class="clothing__row clothing__row_top">
+		  			<h3 class="title title-1">Colored circles</h3>
+		  			<div class="clothing__price">1500 руб.</div>
+		  			<div class="clothing__article">Артикул: 2349874873</div>
 		  		</div>
 		  		<div class="clothing__row">
-		  			<div class="clothing__select select js-select">
-			  		    <span class="select__text js-select-text">M (48)</span>
-			  		    <input type="hidden" class="js-select-input" value="0">
-			  		    <ul class="select__list js-select-list">
-			  		        <li data-id="0">var0</li>
-			  		        <li data-id="1">var1</li>
-			  		        <li data-id="2">var2</li>
-			  		        <li data-id="3">var3</li>
-			  		    </ul>
-			  		</div>
-			  		<button class="btn btn_red">Заказать</button>
+		  			<div class="clothing__title">Информация о товаре</div>
+		  			<div class="clothing__text">
+		  				<p>Для изготовления футболки используется только высококачественный трикотаж и экологически чистые красители на водной основе.</p>
+		  				<p>Футболка выполнена без боковых швов, не садится после стирки.</p>
+		  			</div>
+		  			<div class="clothing__porterage porterage">
+		  				<div class="porterage__col">
+		  					<div class="porterage__title"><i class="ico ico_porterage1"></i>Доставка на место</div>
+		  					<div class="porterage__day">Завтра (13.08.2014)</div>
+		  					<div class="porterage__price">290 руб.</div>
+		  				</div>
+		  				<div class="porterage__col">
+		  					<div class="porterage__title"><i class="ico ico_porterage2"></i>Самовывоз</div>
+		  					<div class="porterage__day">Завтра (13.08.2014)</div>
+		  					<a href="#" class="porterage__link">В любом магазине Printbar</a>
+		  				</div>
+		  			</div>
 		  		</div>
+		  		<div class="clothing__size size">
+		  			<button class="size__btn js-btn-size">Узнай свой размер</button>
+		  			<div class="size__block js-size-block">
+		  				<button class="size__close js-close-size"></button>
+		  				<div class="size__img"><img src="img/size-img.png" alt="img"></div>
+		  				<table class="size__table">
+		  					<tr>
+		  						<th>Размер EU</th>
+		  						<th>Рукав</th>
+		  						<th>Длина X,Y</th>
+		  					</tr>
+		  					<tr>
+		  						<td>XS</td>
+		  						<td>58см</td>
+		  						<td>44см, 62см</td>
+		  					</tr>
+		  					<tr>
+		  						<td>S</td>
+		  						<td>61см</td>
+		  						<td>48см, 64см</td>
+		  					</tr>
+		  					<tr>
+		  						<td>M</td>
+		  						<td>63см</td>
+		  						<td>52см, 67см</td>
+		  					</tr>
+		  					<tr>
+		  						<td>L</td>
+		  						<td>65см</td>
+		  						<td>55см, 70см</td>
+		  					</tr>
+		  					<tr>
+		  						<td>XL</td>
+		  						<td>68см</td>
+		  						<td>62см, 72см</td>
+		  					</tr>
+		  				</table>
+		  			</div>
+		  		</div>
+		  		<div class="clothing__row clothing__row_mod">
+		  			<div class="clothing__col clothing__col_127">
+						<div class="select js-select">
+							<span class="select__text js-select-text">M (48)</span>
+							<input type="hidden" class="js-select-input" value="0">
+							<ul class="select__list js-select-list">
+								<li data-id="0">var0</li>
+								<li data-id="1">var1</li>
+								<li data-id="2">var2</li>
+								<li data-id="3">var3</li>
+							</ul>
+						</div>
+		  			</div>
+		  			<div class="clothing__col clothing__col_117">
+		  				<div class="select js-select">
+							<span class="select__text js-select-text">1 шт</span>
+							<input type="hidden" class="js-select-input" value="0">
+							<ul class="select__list js-select-list">
+								<li data-id="0">var0</li>
+								<li data-id="1">var1</li>
+								<li data-id="2">var2</li>
+								<li data-id="3">var3</li>
+							</ul>
+						</div>
+		  			</div>
+		  			<div class="clothing__col clothing__col_205">
+		  				<div class="select select_color js-select">
+		  					<span class="select__definition">Цвет изделия</span>
+							<span class="select__text js-select-text"><div class="select__color select__color_black"></div></span>
+							<input type="hidden" class="js-select-input" value="0">
+							<ul class="select__list js-select-list">
+								<li data-id="0">
+									<div class="select__color select__color_white"></div>
+								</li>
+								<li data-id="1">
+									<div class="select__color select__color_black"></div>
+								</li>
+								<li data-id="2">
+									<div class="select__color select__color_red"></div>
+								</li>
+							</ul>
+						</div>
+		  			</div>
+		  		</div>
+		  		<div class="clothing__row clothing__row_mod">
+			  		<button class="btn btn_red">Добавить в корзину</button>
+			  		<div class="clothing__formalization formalization"><a href="#">или купить в один клик</a></div>
+			  	</div>
 		  	</div>
 		  	<!-- END clothing__info -->
 		</div>
